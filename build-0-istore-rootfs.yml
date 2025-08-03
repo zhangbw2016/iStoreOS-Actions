@@ -1,0 +1,53 @@
+name: build-0-istore-rootfs
+on:
+  workflow_dispatch:  # 允许手动触发
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Debug workspace contents
+        run: ls -R
+
+      - name: 下载构建文件
+        run: |
+          wget https://github.com/Kwonelee/fenliu/releases/download/rootfs/istoreos-imagebuilder-24.10.2-armsr-armv8.Linux-x86_64.tar.zst
+          echo "解压文件"
+          zstd -d -c istoreos-imagebuilder-24.10.2-armsr-armv8.Linux-x86_64.tar.zst | tar -xvf -
+
+      - name: 安装工具
+        run: |
+          sudo apt update
+          sudo apt install build-essential \
+                gawk \
+                unzip \
+                libncurses5-dev \
+                zlib1g-dev \
+                libssl-dev \
+                python3-lib2to3 \
+                python3-venv \
+                wget \
+                curl \
+                rsync \
+                subversion \
+                git \
+                tree
+
+      - name: 构建rootfs文件
+        run: |
+          cd istoreos-imagebuilder-24.10.2-armsr-armv8.Linux-x86_64
+          make image PROFILE=generic PACKAGES="-libustream-mbedtls"
+
+      - name: Upload firmware to GitHub Releases
+        uses: softprops/action-gh-release@v2.2.1
+        with:
+          tag_name: rootfs
+          name: rootfs for arm_board
+          body_path: 
+          files: |
+            istoreos-imagebuilder-24.10.2-armsr-armv8.Linux-x86_64/bin/targets/armsr/armv8/istoreos-armsr-armv8-generic-rootfs.tar.gz
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
