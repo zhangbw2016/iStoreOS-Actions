@@ -10,6 +10,7 @@ on:
         type: choice
         options:
           - station-m2
+          - s905d
 
 jobs:
   build:
