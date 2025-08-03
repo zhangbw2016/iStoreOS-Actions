@@ -50,4 +50,4 @@ jobs:
           files: |
             istoreos-imagebuilder-24.10.2-armsr-armv8.Linux-x86_64/bin/targets/armsr/armv8/istoreos-armsr-armv8-generic-rootfs.tar.gz
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
