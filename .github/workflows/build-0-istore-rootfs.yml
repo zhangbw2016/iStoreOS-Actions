@@ -1,6 +1,6 @@
 name: build-0-istore-rootfs
 on:
-  workflow_dispatch:  # 允许手动触发
+  workflow_dispatch: 
 
 jobs:
   build:
