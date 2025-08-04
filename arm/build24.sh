@@ -1,11 +1,5 @@
 #!/bin/bash
 # 此脚本在Imagebuilder 根目录运行
-source custom-packages.sh
-echo "第三方软件包: $CUSTOM_PACKAGES"
-LOGFILE="/tmp/uci-defaults-log.txt"
-echo "Starting 99-custom.sh at $(date)" >> $LOGFILE
-echo "Include Docker: $INCLUDE_DOCKER"
-
 
 # 输出调试信息
 echo "$(date '+%Y-%m-%d %H:%M:%S') - 开始构建固件..."
