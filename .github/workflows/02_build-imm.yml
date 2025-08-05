@@ -1,4 +1,4 @@
-name: 02_build-imm
+name: 📦 02_build-imm
 on:
   repository_dispatch:
   workflow_dispatch:
