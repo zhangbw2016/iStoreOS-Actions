@@ -51,8 +51,8 @@ jobs:
         cp files/etc/uci-defaults/99-custom.sh imagebuilder/files/etc/uci-defaults/
         mkdir -p imagebuilder/files/etc/opkg
         cp files/etc/opkg/distfeeds.conf imagebuilder/files/etc/opkg/
-        mkdir -p imagebuilder/files/etc/banner
-        cp files/files/etc/banner imagebuilder/files/etc/banner/
+        mkdir -p imagebuilder/files/etc/banner1
+        cp files/etc/banner imagebuilder/files/etc/banner1/
         echo "打印action目录结构"
         tree -L 1
 
