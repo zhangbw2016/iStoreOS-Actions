@@ -19,9 +19,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Debug workspace contents
-        run: ls -R
-
       - name: Download prebuilt rootfs.tar.gz
         run: |
           echo "📦 正在下载预构建 rootfs"
