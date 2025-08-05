@@ -39,6 +39,8 @@ PACKAGES=""
 PACKAGES="$PACKAGES luci"
 PACKAGES="$PACKAGES dnsmasq-full"
 PACKAGES="$PACKAGES -dnsmasq"
+PACKAGES="$PACKAGES perl"
+PACKAGES="$PACKAGES perlbase-time"
 PACKAGES="$PACKAGES luci-i18n-firewall-zh-cn"
 PACKAGES="$PACKAGES luci-i18n-base-zh-cn"
 PACKAGES="$PACKAGES luci-i18n-ttyd-zh-cn"
@@ -49,7 +51,6 @@ PACKAGES="$PACKAGES luci-i18n-argon-config-zh-cn"
 PACKAGES="$PACKAGES luci-i18n-quickstart-zh-cn"
 PACKAGES="$PACKAGES luci-i18n-dockerman-zh-cn"
 PACKAGES="$PACKAGES -libustream-mbedtls"
-
 
 # 追加自定义包
 PACKAGES="$PACKAGES $CUSTOM_PACKAGES"
