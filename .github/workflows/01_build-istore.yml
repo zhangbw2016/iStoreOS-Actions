@@ -1,4 +1,4 @@
-name: build1-istore
+name: 01_build-istore
 on:
   repository_dispatch:
   workflow_dispatch:
