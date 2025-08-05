@@ -1,4 +1,4 @@
-name: 📦 Build iStoreOS 24.10.2 arm64 rootfs
+name: 📦 build-rootfs-full
 
 on:
   workflow_dispatch:
