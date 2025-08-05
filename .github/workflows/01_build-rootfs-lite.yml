@@ -1,4 +1,4 @@
-name: build0-rootfs-lite
+name: 01_build-rootfs-lite
 on:
   workflow_dispatch: 
 
