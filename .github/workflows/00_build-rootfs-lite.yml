@@ -23,7 +23,7 @@ jobs:
       - name: 🧱 构建iStoreOS-rootfs
         run: |
           cd imagebuilder
-          make image PROFILE=generic PACKAGES="-libustream-mbedtls"
+          make image PROFILE=generic PACKAGES="-libustream-mbedtls" FILES="files"
 
       - name: 🚀 上传到 Release
         uses: softprops/action-gh-release@v2.2.1
