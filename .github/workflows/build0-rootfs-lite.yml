@@ -1,4 +1,4 @@
-name: build-0-istore-rootfs
+name: build0-rootfs-lite
 on:
   workflow_dispatch: 
 
