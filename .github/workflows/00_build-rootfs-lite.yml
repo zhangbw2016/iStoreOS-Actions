@@ -9,43 +9,27 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Debug workspace contents
-        run: ls -R
-
-      - name: 下载构建文件
+      - name: ⏬ 下载 ImageBuilder
         run: |
-          wget https://github.com/Kwonelee/fenliu/releases/download/rootfs/istoreos-imagebuilder-24.10.2-armsr-armv8.Linux-x86_64.tar.zst
-          echo "解压文件"
-          zstd -d -c istoreos-imagebuilder-24.10.2-armsr-armv8.Linux-x86_64.tar.zst | tar -xvf -
+          curl -L -o imagebuilder.tar.zst https://github.com/Kwonelee/fenliu/releases/download/rootfs/istoreos-imagebuilder-24.10.2-armsr-armv8.Linux-x86_64.tar.zst
+          tar --use-compress-program=unzstd -xvf imagebuilder.tar.zst
+          mv istoreos-imagebuilder-* imagebuilder
 
-      - name: 安装工具
+      - name: ⚙️ 安装依赖
         run: |
-          sudo apt update
-          sudo apt install build-essential \
-                gawk \
-                unzip \
-                libncurses5-dev \
-                zlib1g-dev \
-                libssl-dev \
-                python3-lib2to3 \
-                python3-venv \
-                wget \
-                curl \
-                rsync \
-                subversion \
-                git \
-                tree
+          sudo apt-get update
+          sudo apt-get install -y build-essential libncurses5-dev zstd curl unzip tree
 
-      - name: 构建rootfs文件
+      - name: 🧱 构建iStoreOS-rootfs
         run: |
-          cd istoreos-imagebuilder-24.10.2-armsr-armv8.Linux-x86_64
+          cd imagebuilder
           make image PROFILE=generic PACKAGES="-libustream-mbedtls"
 
-      - name: Upload firmware to GitHub Releases
+      - name: 🚀 上传到 Release
         uses: softprops/action-gh-release@v2.2.1
         with:
           tag_name: iStoreOS-24.10.2-arm64-rootfs-lite
           files: |
-            istoreos-imagebuilder-24.10.2-armsr-armv8.Linux-x86_64/bin/targets/armsr/armv8/*generic-rootfs.tar.gz
+            imagebuilder/bin/targets/armsr/armv8/*generic-rootfs.tar.gz
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
