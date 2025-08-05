@@ -44,7 +44,7 @@ jobs:
       - name: Upload firmware to GitHub Releases
         uses: softprops/action-gh-release@v2.2.1
         with:
-          tag_name: rootfs
+          tag_name: iStoreOS-24.10.2-arm64-rootfs-lite
           name: rootfs for arm_board
           body_path: 
           files: |
