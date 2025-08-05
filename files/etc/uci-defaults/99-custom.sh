@@ -30,8 +30,8 @@ NEW_DESCRIPTION="Packaged by Kwonelee"
 sed -i "s/DISTRIB_DESCRIPTION='[^']*'/DISTRIB_DESCRIPTION='$NEW_DESCRIPTION'/" "$FILE_PATH"
 
 # 修改banner
-cp /mnt/banner /etc/banner
-rm /mnt/banner
+cp /etc/banner/banner /etc/
+rm /etc/banner
 
 # 计算网卡数量
 count=0
