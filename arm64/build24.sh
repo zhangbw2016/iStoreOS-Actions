@@ -37,6 +37,7 @@ PACKAGES=""
 
 # 基础系统与驱动
 # 基础系统与驱动
+PACKAGES="$PACKAGES luci"
 PACKAGES="$PACKAGES base-files"
 PACKAGES="$PACKAGES block-mount"
 PACKAGES="$PACKAGES ca-bundle"
@@ -104,6 +105,8 @@ PACKAGES="$PACKAGES kmod-tg3"
 PACKAGES="$PACKAGES -libustream-mbedtls"
 
 # LuCI 中文本地化与插件
+#PACKAGES="$PACKAGES luci-i18n-linkease-zh-cn"
+#PACKAGES="$PACKAGES luci-i18n-diskman-zh-cn"
 PACKAGES="$PACKAGES luci-i18n-package-manager-zh-cn"
 PACKAGES="$PACKAGES luci-i18n-argon-zh-cn"
 PACKAGES="$PACKAGES luci-i18n-argon-config-zh-cn"
