@@ -30,8 +30,8 @@ uci delete ttyd.@ttyd[0].interface
 #sed -i "s/DISTRIB_DESCRIPTION='[^']*'/DISTRIB_DESCRIPTION='$NEW_DESCRIPTION'/" "$FILE_PATH"
 
 # 修改banner
-cp files/etc/banner/banner /etc/
-rm /etc/banner
+cp /etc/banner1/banner /etc/
+rm /etc/banner1
 
 # 计算网卡数量
 count=0
