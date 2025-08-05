@@ -66,9 +66,7 @@ jobs:
       - name: Upload firmware to GitHub Releases
         uses: softprops/action-gh-release@v2.2.1
         with:
-          tag_name: immortalwrt
-          name: immortalwrt for arm_board
-          body_path: 
+          tag_name: immortalwrt-24.10.2-arm64-Board
           files: |
             ${{ env.PACKAGED_OUTPUTPATH }}/*.img.gz
         env:
