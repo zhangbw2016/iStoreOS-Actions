@@ -36,7 +36,6 @@ echo "$(date '+%Y-%m-%d %H:%M:%S') - 开始构建固件..."
 PACKAGES=""
 
 # 基础系统与驱动
-# 基础系统与驱动
 PACKAGES="$PACKAGES luci"
 PACKAGES="$PACKAGES base-files"
 PACKAGES="$PACKAGES block-mount"
