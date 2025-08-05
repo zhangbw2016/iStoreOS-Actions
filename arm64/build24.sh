@@ -122,7 +122,7 @@ PACKAGES="$PACKAGES luci-i18n-dockerman-zh-cn"
 # LuCI 主题与功能
 PACKAGES="$PACKAGES luci-theme-argon"
 PACKAGES="$PACKAGES luci-app-argon-config"
-PACKAGES="$PACKAGES luci-app-filetransfer"
+#PACKAGES="$PACKAGES luci-app-filetransfer"
 PACKAGES="$PACKAGES luci-app-ttyd"
 PACKAGES="$PACKAGES luci-app-cifs-mount"
 
