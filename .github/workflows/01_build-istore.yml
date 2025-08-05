@@ -68,7 +68,6 @@ jobs:
         with:
           tag_name: istoreos
           name: istoreos for arm_board
-          body_path: 
           files: |
             ${{ env.PACKAGED_OUTPUTPATH }}/*.img.gz
         env:
