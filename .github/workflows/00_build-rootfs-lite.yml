@@ -22,8 +22,10 @@ jobs:
 
       - name: 🧱 构建iStoreOS-rootfs
         run: |
-          cd imagebuilder
+          #cd imagebuilder
+          #echo "启用rootfs.tar.gz配置"
           #sed -i 's/# CONFIG_TARGET_ROOTFS_TARGZ is not set/CONFIG_TARGET_ROOTFS_TARGZ=y/' .config
+          cd imagebuilder
           make image PROFILE=generic PACKAGES="-libustream-mbedtls" FILES="files"
 
       - name: 🚀 上传到 Release
