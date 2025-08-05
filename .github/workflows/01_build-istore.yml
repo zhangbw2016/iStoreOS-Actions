@@ -66,8 +66,7 @@ jobs:
       - name: Upload firmware to GitHub Releases
         uses: softprops/action-gh-release@v2.2.1
         with:
-          tag_name: istoreos
-          name: istoreos for arm_board
+          tag_name: iStoreOS-24.10.2-arm64-Board
           files: |
             ${{ env.PACKAGED_OUTPUTPATH }}/*.img.gz
         env:
