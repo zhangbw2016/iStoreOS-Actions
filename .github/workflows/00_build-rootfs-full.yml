@@ -74,7 +74,7 @@ jobs:
         tag_name: iStoreOS-24.10.2-arm64-rootfs
         files: |
           imagebuilder/bin/targets/armsr/armv8/*generic-rootfs.tar.gz
-        token: ${{ secrets.GITHUB_TOKEN }}
+        token: ${{ secrets.GH_TOKEN }}
       env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
 
