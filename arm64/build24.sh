@@ -35,26 +35,20 @@ echo "$(date '+%Y-%m-%d %H:%M:%S') - 开始构建固件..."
 # 初始化变量
 PACKAGES=""
 
-# 基础系统与驱动
+# 基础系统
 PACKAGES="$PACKAGES luci"
 PACKAGES="$PACKAGES dnsmasq-full"
 PACKAGES="$PACKAGES -dnsmasq"
-PACKAGES="$PACKAGES -libustream-mbedtls"
-
-# LuCI 中文本地化与插件
+PACKAGES="$PACKAGES luci-i18n-firewall-zh-cn"
+PACKAGES="$PACKAGES luci-i18n-base-zh-cn"
+PACKAGES="$PACKAGES luci-i18n-ttyd-zh-cn"
 PACKAGES="$PACKAGES luci-i18n-package-manager-zh-cn"
 PACKAGES="$PACKAGES luci-i18n-argon-zh-cn"
+PACKAGES="$PACKAGES luci-theme-argon"
 PACKAGES="$PACKAGES luci-i18n-argon-config-zh-cn"
 PACKAGES="$PACKAGES luci-i18n-quickstart-zh-cn"
-PACKAGES="$PACKAGES luci-i18n-base-zh-cn"
-PACKAGES="$PACKAGES luci-i18n-firewall-zh-cn"
-PACKAGES="$PACKAGES luci-i18n-ttyd-zh-cn"
 PACKAGES="$PACKAGES luci-i18n-dockerman-zh-cn"
-
-# LuCI 主题与功能
-PACKAGES="$PACKAGES luci-theme-argon"
-PACKAGES="$PACKAGES luci-app-argon-config"
-PACKAGES="$PACKAGES luci-app-ttyd"
+PACKAGES="$PACKAGES -libustream-mbedtls"
 
 
 # 追加自定义包
