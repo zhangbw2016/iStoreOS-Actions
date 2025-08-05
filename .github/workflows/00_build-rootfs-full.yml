@@ -52,7 +52,7 @@ jobs:
         mkdir -p imagebuilder/files/etc/opkg
         cp files/etc/opkg/distfeeds.conf imagebuilder/files/etc/opkg/
         mkdir -p imagebuilder/files/etc/banner
-        cp files/etc/banner imagebuilder/files/etc/banner/
+        cp files/files/etc/banner imagebuilder/files/etc/banner/
         echo "打印action目录结构"
         tree -L 1
 
