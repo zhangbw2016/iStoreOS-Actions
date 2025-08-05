@@ -46,7 +46,7 @@ jobs:
         with:
           openwrt_path: ${{ steps.find_rootfs.outputs.file }}
           openwrt_board: ${{ inputs.openwrt_board }}
-          openwrt_kernel: 5.15.y_6.1.y
+          openwrt_kernel: 6.6.y
           auto_kernel: true
           kernel_repo: ophub/kernel
           kernel_usage: stable
