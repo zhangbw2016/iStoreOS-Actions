@@ -182,8 +182,8 @@ PACKAGES="$PACKAGES -libustream-mbedtls"
 #PACKAGES="$PACKAGES kmod-tg3"
 
 # LuCI 中文本地化与插件
-PACKAGES="$PACKAGES luci-i18n-linkease-zh-cn"
-PACKAGES="$PACKAGES luci-i18n-diskman-zh-cn"
+#PACKAGES="$PACKAGES luci-i18n-linkease-zh-cn"
+#PACKAGES="$PACKAGES luci-i18n-diskman-zh-cn"
 #PACKAGES="$PACKAGES luci-i18n-filetransfer-zh-cn"
 #PACKAGES="$PACKAGES luci-i18n-cifs-mount-zh-cn"
 #PACKAGES="$PACKAGES luci-i18n-unishare-zh-cn"
