@@ -1018,6 +1018,15 @@ PACKAGES="$PACKAGES zlib"
 PACKAGES="$PACKAGES zram-swap"
 PACKAGES="$PACKAGES -libustream-mbedtls"
 
+# O大打包脚本补充插件
+PACKAGES="$PACKAGES perlbase-time"
+
+# 斐讯N1 无线
+PACKAGES="$PACKAGES kmod-brcmfmac"
+#PACKAGES="$PACKAGES wpad-basic-mbedtls"
+#PACKAGES="$PACKAGES iw"
+#PACKAGES="$PACKAGES iwinfo"
+
 
 # 追加自定义包
 PACKAGES="$PACKAGES $CUSTOM_PACKAGES"
