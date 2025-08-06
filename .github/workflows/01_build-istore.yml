@@ -216,14 +216,10 @@ jobs:
 
       - name: Upload firmware to GitHub Releases
         uses: softprops/action-gh-release@v2.2.1
-        env: 
-          CURRENT_TIME: ${{ steps.datetime.outputs.CURRENT_TIME }}
         with:
           tag_name: iStoreOS-armsr-armv8
           body: |
             🌳  版本: iStoreOS-24.10.2
-            
-            ⏱️  构建时间: ${{ env.CURRENT_TIME }}
             
             👤  用户名: root
             
