@@ -1027,6 +1027,21 @@ PACKAGES="$PACKAGES kmod-brcmfmac"
 #PACKAGES="$PACKAGES iw"
 #PACKAGES="$PACKAGES iwinfo"
 
+# file/etc/packages目录的第三方可选插件
+PACKAGES="$PACKAGES filebrowser"
+PACKAGES="$PACKAGES luci-app-filebrowser-go"
+PACKAGES="$PACKAGES luci-i18n-filebrowser-go-zh-cn"
+PACKAGES="$PACKAGES luci-app-amlogic"
+PACKAGES="$PACKAGES luci-i18n-amlogic-zh-cn"
+PACKAGES="$PACKAGES lucky"
+PACKAGES="$PACKAGES luci-app-lucky"
+PACKAGES="$PACKAGES luci-i18n-lucky-zh-cn"
+PACKAGES="$PACKAGES openlist2"
+PACKAGES="$PACKAGES luci-app-openlist2"
+PACKAGES="$PACKAGES luci-i18n-openlist2-zh-cn"
+PACKAGES="$PACKAGES luci-app-ramfree"
+PACKAGES="$PACKAGES luci-i18n-ramfree-zh-cn"
+
 
 # 追加自定义包
 PACKAGES="$PACKAGES $CUSTOM_PACKAGES"
