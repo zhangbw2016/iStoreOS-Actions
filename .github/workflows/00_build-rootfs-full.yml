@@ -44,13 +44,13 @@ jobs:
       run: |
         cp arm64/build24.sh imagebuilder/
         cp arm64/Makefile imagebuilder/
-        cp arm64/repositories.conf imagebuilder/
+        #cp arm64/repositories.conf imagebuilder/
         cp shell/prepare-packages.sh imagebuilder/
         cp shell/custom-packages.sh imagebuilder/
         mkdir -p imagebuilder/files/etc/uci-defaults
         cp files/etc/uci-defaults/99-custom.sh imagebuilder/files/etc/uci-defaults/
-        mkdir -p imagebuilder/files/etc/opkg
-        cp files/etc/opkg/distfeeds.conf imagebuilder/files/etc/opkg/
+        #mkdir -p imagebuilder/files/etc/opkg
+        #cp files/etc/opkg/distfeeds.conf imagebuilder/files/etc/opkg/
         mkdir -p imagebuilder/files/etc/banner1
         cp files/etc/banner imagebuilder/files/etc/banner1/
         cd imagebuilder
