@@ -214,7 +214,7 @@ jobs:
           FILENAME=$(basename "$FILE")
           echo "FILENAME=$FILENAME" >> $GITHUB_ENV
           KERNEL_VERSION=$(echo "$FILENAME" | grep -oP 'k\d+\.\d+\.\d+')
-          mv "$FILE" "${{ env.PACKAGED_OUTPUTPATH }}/istoreos_24.10.2_${{ inputs.openwrt_board }}_$(KERNEL_VERSION)_$(date +%Y.%m.%d).img.gz"
+          mv "$FILE" "${{ env.PACKAGED_OUTPUTPATH }}/istoreos_24.10.2_${{ inputs.openwrt_board }}_${KERNEL_VERSION}_$(date +%Y.%m.%d).img.gz"
 
 
       - name: Upload firmware to GitHub Releases
