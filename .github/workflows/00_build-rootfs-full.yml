@@ -44,7 +44,7 @@ jobs:
       run: |
         cp arm64/build24.sh imagebuilder/
         cp arm64/Makefile imagebuilder/
-        cp arm64/repositories.conf imagebuilder/
+        #cp arm64/repositories.conf imagebuilder/
         cp shell/prepare-packages.sh imagebuilder/
         cp shell/custom-packages.sh imagebuilder/
         cp files/etc/packages/*.ipk imagebuilder/packages/
