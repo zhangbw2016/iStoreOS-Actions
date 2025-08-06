@@ -38,7 +38,7 @@ PACKAGES=""
 # 官方集成列表
 PACKAGES="$PACKAGES adb"
 PACKAGES="$PACKAGES adb-enablemodem"
-PACKAGES="$PACKAGES appfilter"
+#PACKAGES="$PACKAGES appfilter"
 PACKAGES="$PACKAGES attr"
 PACKAGES="$PACKAGES avahi-dbus-daemon"
 PACKAGES="$PACKAGES avahi-utils"
