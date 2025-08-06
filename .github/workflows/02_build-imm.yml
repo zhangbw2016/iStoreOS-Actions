@@ -217,6 +217,14 @@ jobs:
         uses: softprops/action-gh-release@v2.2.1
         with:
           tag_name: immortalwrt-24.10.2-armsr-armv8
+          body: |
+            ⏱️ 构建时间: $(date +"%Y年%m月%d日%H时%M分")
+        
+            👤 用户名: root
+        
+            🔒 密码: 无
+        
+            📒 说明: 单网口设备默认网口为LAN，旁路由模式，需要接入主路由器后进后台查找对应IP地址访问，反之双网口设备默认网口为WAN+LAN，主路由模式。
           files: |
             ${{ env.PACKAGED_OUTPUTPATH }}/*.img.gz
         env:
