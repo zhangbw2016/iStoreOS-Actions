@@ -33,7 +33,7 @@ jobs:
       - name: 🚀 上传到 Release
         uses: softprops/action-gh-release@v2.2.1
         with:
-          tag_name: $(date +"%Y.%m.%d-%H.%M")-rootfs-lite
+          tag_name: iStoreOS-rootfs-lite
           files: |
             imagebuilder/bin/targets/armsr/armv8/*generic-rootfs.tar.gz
         env:
