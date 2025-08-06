@@ -1016,6 +1016,7 @@ PACKAGES="$PACKAGES xz"
 PACKAGES="$PACKAGES xz-utils"
 PACKAGES="$PACKAGES zlib"
 PACKAGES="$PACKAGES zram-swap"
+PACKAGES="$PACKAGES -libustream-mbedtls"
 
 
 # 追加自定义包
