@@ -216,7 +216,7 @@ jobs:
       - name: Upload firmware to GitHub Releases
         uses: softprops/action-gh-release@v2.2.1
         with:
-          tag_name: immortalwrt-24.10.2-armsr-armv8
+          tag_name: immortalwrt-armsr-armv8
           body: |
             ⏱️ 构建时间: $(date +"%Y年%m月%d日%H时%M分")
         
