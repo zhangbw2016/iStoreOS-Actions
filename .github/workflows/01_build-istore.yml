@@ -3,6 +3,18 @@ on:
   repository_dispatch:
   workflow_dispatch:
     inputs:
+      openwrt_kernel:
+        description: "Select kernel version"
+        required: false
+        default: "5.15.y_6.1.y"
+        type: choice
+        options:
+          - 5.4.y
+          - 5.10.y
+          - 5.15.y
+          - 6.1.y
+          - 6.6.y
+          - 6.12.y
       openwrt_board:
         description: "Select device board"
         required: false
@@ -196,10 +208,10 @@ jobs:
         with:
           openwrt_path: ${{ steps.find_rootfs.outputs.file }}
           openwrt_board: ${{ inputs.openwrt_board }}
-          openwrt_kernel: 6.6.y
+          openwrt_kernel: ${{ inputs.openwrt_board }}
           auto_kernel: true
           kernel_repo: ophub/kernel
-          kernel_usage: stable
+          kernel_usage: flippy
           builder_name: kwonelee
 
       - name: Rename .img.gz file
