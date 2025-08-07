@@ -183,7 +183,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Download prebuilt rootfs.tar.gz
+      - name: ⏬ 下载 rootfs.tar.gz
         run: |
           echo "📦 正在下载预构建 rootfs"
           mkdir -p bin/targets/armsr/armv8
@@ -191,7 +191,7 @@ jobs:
             https://github.com/Kwonelee/iStoreOS-Actions/releases/download/iStoreOS-rootfs-full/istoreos-armsr-armv8-generic-rootfs.tar.gz
             #https://github.com/Kwonelee/iStoreOS-Actions/releases/download/iStoreOS-rootfs-lite/istoreos-armsr-armv8-generic-rootfs.tar.gz
 
-      - name: 查找rootfs.tar.gz所在路径
+      - name: 🔍 查找rootfs.tar.gz所在路径
         id: find_rootfs
         run: |
           ROOTFS_FILE=$(find bin/targets/armsr/armv8/ -type f -name "*rootfs.tar.gz" | head -n1)
@@ -202,7 +202,7 @@ jobs:
           fi
           echo "file=$ROOTFS_FILE" >> $GITHUB_OUTPUT
 
-      - name: Package openwrt
+      - name: 🧱 打包iStoreOS-24.10.2
         if: ${{ steps.down.outputs.status }} == 'success' && !cancelled()
         uses: ophub/amlogic-s9xxx-openwrt@main
         with:
@@ -214,7 +214,7 @@ jobs:
           kernel_usage: stable
           builder_name: Kwonelee
 
-      - name: Rename .img.gz file
+      - name: 📜 调整.img.gz 文件名
         id: rename
         run: |
           FILE=$(ls ${{ env.PACKAGED_OUTPUTPATH }}/*.img.gz | head -n1)
@@ -225,8 +225,7 @@ jobs:
           KERNEL_VERSION=$(echo "$FILENAME" | grep -oP 'k\d+\.\d+\.\d+')
           mv "$FILE" "${{ env.PACKAGED_OUTPUTPATH }}/istoreos_24.10.2_${MODEL}_${KERNEL_VERSION}_$(date +%Y.%m.%d).img.gz"
 
-
-      - name: Upload firmware to GitHub Releases
+      - name: 🚀 上传到 Release
         uses: softprops/action-gh-release@v2.2.1
         with:
           tag_name: iStoreOS-arm-boards
