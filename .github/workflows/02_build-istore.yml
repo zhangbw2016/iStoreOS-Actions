@@ -1,4 +1,4 @@
-name: 🎈 02_build-istore
+name: 💿 02_build-istore
 on:
   repository_dispatch:
   workflow_dispatch:
