@@ -211,8 +211,8 @@ jobs:
           openwrt_kernel: ${{ inputs.openwrt_board }}
           auto_kernel: true
           kernel_repo: ophub/kernel
-          kernel_usage: flippy
-          builder_name: kwonelee
+          kernel_usage: stable
+          builder_name: Kwonelee
 
       - name: Rename .img.gz file
         id: rename
