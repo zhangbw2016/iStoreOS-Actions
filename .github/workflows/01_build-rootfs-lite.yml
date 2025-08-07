@@ -56,7 +56,7 @@ jobs:
                 luci-proto-ncm luci-proto-openconnect luci-proto-ppp luci-proto-qmi luci-proto-relay \
                 \
                 luci-i18n-quickstart-zh-cn luci-i18n-dockerman-zh-cn \
-                
+                \
                 -libustream-mbedtls \" FILES="files"
 
       - name: 🚀 上传到 Release
