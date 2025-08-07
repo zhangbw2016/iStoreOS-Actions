@@ -3,18 +3,6 @@ on:
   repository_dispatch:
   workflow_dispatch:
     inputs:
-      openwrt_kernel:
-        description: "Select kernel version"
-        required: false
-        default: "6.1.y"
-        type: choice
-        options:
-          - 5.4.y
-          - 5.10.y
-          - 5.15.y
-          - 6.1.y
-          - 6.6.y
-          - 6.12.y
       openwrt_board:
         description: "Select device board"
         required: false
@@ -175,6 +163,18 @@ on:
           - zcube1-max
           - zk-r39a
           - zysj
+      openwrt_kernel:
+        description: "Select kernel version"
+        required: false
+        default: "6.1.y"
+        type: choice
+        options:
+          - 5.4.y
+          - 5.10.y
+          - 5.15.y
+          - 6.1.y
+          - 6.6.y
+          - 6.12.y
 
 jobs:
   build:
