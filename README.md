@@ -1,5 +1,8 @@
 # iStoreOS-Actions
 
+# 🌟介绍
+献给那些年非要iStoreOS的你！！！
+
 # 🌟截图
 ![截图](https://github.com/user-attachments/assets/1f3ae546-b5a2-4edc-9b1e-a6876734c2ac)
 
