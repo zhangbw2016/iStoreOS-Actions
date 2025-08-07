@@ -4,8 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       include_docker:
-        description: |
-          是否编译 Docker 插件
+        description: "是否编译Docker插件"
         required: true
         default: 'yes'
         type: choice
