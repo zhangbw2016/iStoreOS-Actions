@@ -5,7 +5,7 @@ on:
     inputs:
       openwrt_board:
         description: "请选择设备型号"
-        required: false
+        required: true
         default: "s905d"
         type: choice
         options:
@@ -165,7 +165,7 @@ on:
           - zysj
       openwrt_kernel:
         description: "请选择内核版本，若未能匹配则自动"
-        required: false
+        required: true
         default: "6.1.y"
         type: choice
         options:
