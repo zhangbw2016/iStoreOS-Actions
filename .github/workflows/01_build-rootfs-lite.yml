@@ -20,7 +20,7 @@ jobs:
         tar --use-compress-program=unzstd -xvf imagebuilder.tar.zst
         mv istoreos-imagebuilder-* imagebuilder
 
-    - name: ⏬ 复制和设置必备文件
+    - name: ⏬ 复制并设置必备文件
       run: |
         cp arm64/Makefile imagebuilder/
         cp files/etc/packages/*.ipk imagebuilder/packages/
