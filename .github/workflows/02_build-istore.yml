@@ -175,6 +175,14 @@ on:
           - 6.1.y
           - 6.6.y
           - 6.12.y
+      openwrt_rootfs:
+        description: "请选择iStoreOS-rootfs底包"
+        required: true
+        default: "full"
+        type: choice
+        options:
+          - full
+          - lite
 
 jobs:
   build:
