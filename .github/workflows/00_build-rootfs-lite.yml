@@ -28,7 +28,7 @@ jobs:
           sed -i "s|CONFIG_TARGET_ROOTFS_SQUASHFS=.*|# CONFIG_TARGET_ROOTFS_SQUASHFS is not set|g" .config
           sed -i "s|CONFIG_TARGET_IMAGES_GZIP=.*|# CONFIG_TARGET_IMAGES_GZIP is not set|g" .config
           cd imagebuilder
-          make image PROFILE=generic PACKAGES="luci dnsmasq-full -dnsmasq luci-i18n-firewall-zh-cn luci-i18n-base-zh-cn luci-i18n-ttyd-zh-cn luci-i18n-package-manager-zh-cn luci-i18n-argon-zh-cn luci-theme-argon luci-i18n-argon-config-zh-cn luci-i18n-quickstart-zh-cn luci-i18n-dockerman-zh-cn -libustream-mbedtls" FILES="files"
+          make image PROFILE=generic PACKAGES="luci -dnsmasq dnsmasq-full luci-i18n-firewall-zh-cn luci-i18n-base-zh-cn luci-i18n-ttyd-zh-cn luci-i18n-package-manager-zh-cn luci-i18n-argon-zh-cn luci-theme-argon luci-i18n-argon-config-zh-cn luci-i18n-quickstart-zh-cn luci-i18n-dockerman-zh-cn -libustream-mbedtls" FILES="files"
 
       - name: 🚀 上传到 Release
         uses: softprops/action-gh-release@v2.2.1
