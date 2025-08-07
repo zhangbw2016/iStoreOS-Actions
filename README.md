@@ -1,12 +1,12 @@
 # iStoreOS-Actions
 
-# 🤔介绍
-献给那些年非要iStoreOS的你！！！
+# 🤔Introduce
+Dedicated to you who have been searching for iStoreOS firmware for many years!!!
 
-# 💥截图
+# 💥Screenshot
 ![截图](https://github.com/user-attachments/assets/1f3ae546-b5a2-4edc-9b1e-a6876734c2ac)
 
-# 🌟鸣谢
+# 🌟Thanks
 ### [istoreos-builder](https://github.com/wukongdaily/istoreos-builder)
 ### [amlogic-s9xxx-openwrt](https://github.com/ophub/amlogic-s9xxx-openwrt)
 ### [istoreos](https://github.com/istoreos/istoreos)
