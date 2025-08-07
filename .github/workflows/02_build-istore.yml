@@ -235,7 +235,7 @@ jobs:
       - name: 🚀 上传到 Release
         uses: softprops/action-gh-release@v2.2.1
         with:
-          tag_name: iStoreOS-arm-boards
+          tag_name: iStoreOS-boards-${{ inputs.openwrt_rootfs }}
           body: |
             🌳 版本: iStoreOS-24.10.2
             
