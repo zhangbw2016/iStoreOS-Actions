@@ -60,7 +60,7 @@ jobs:
            luci-i18n-quickstart-zh-cn luci-i18n-dockerman-zh-cn \
            luci-app-amlogic luci-i18n-amlogic-zh-cn \
            \
-           -libustream-mbedtls \" FILES="files"
+           -libustream-mbedtls" FILES="files"
 
     - name: 🚀 上传到 Release
       uses: softprops/action-gh-release@v2.2.1
