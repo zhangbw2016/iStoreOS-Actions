@@ -1,6 +1,6 @@
 name: 📦 01_build-rootfs-lite
 on:
-  workflow_dispatch: 
+  workflow_dispatch:
 
 jobs:
   build:
