@@ -39,7 +39,7 @@ jobs:
         mv istoreos-imagebuilder-* imagebuilder
         
     
-    - name: ⏬ 复制必备文件
+    - name: ⏬ 复制和设置必备文件
       run: |
         cp arm64/build24.sh imagebuilder/
         cp arm64/Makefile imagebuilder/
