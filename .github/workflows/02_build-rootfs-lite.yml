@@ -1,4 +1,4 @@
-name: 📦 01_build-rootfs-lite
+name: 📦 02_build-rootfs-lite
 on:
   workflow_dispatch: 
 
