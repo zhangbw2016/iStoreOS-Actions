@@ -1,4 +1,4 @@
-name: 📦 01_build-rootfs-full
+name: 💿 01_build-rootfs-full
 on:
   workflow_dispatch:
     inputs:
