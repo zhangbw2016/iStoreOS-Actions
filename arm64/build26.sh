@@ -35,10 +35,10 @@ echo "$(date '+%Y-%m-%d %H:%M:%S') - 开始构建固件..."
 # 初始化变量
 PACKAGES=""
 
-# 基础系统
+# 精简构建
 PACKAGES="$PACKAGES luci"
-PACKAGES="$PACKAGES dnsmasq-full"
 PACKAGES="$PACKAGES -dnsmasq"
+PACKAGES="$PACKAGES dnsmasq-full"
 PACKAGES="$PACKAGES luci-theme-argon"
 PACKAGES="$PACKAGES luci-i18n-argon-zh-cn"
 PACKAGES="$PACKAGES luci-app-argon-config"
@@ -52,6 +52,24 @@ PACKAGES="$PACKAGES luci-i18n-upnp-zh-cn"
 PACKAGES="$PACKAGES luci-i18n-samba4-zh-cn"
 PACKAGES="$PACKAGES luci-i18n-dockerman-zh-cn"
 PACKAGES="$PACKAGES -libustream-mbedtls"
+
+# O大打包脚本补充插件
+PACKAGES="$PACKAGES perlbase-base perlbase-file perlbase-time perlbase-utf8 perlbase-xsloader"
+
+# file/etc/packages目录的第三方可选插件
+PACKAGES="$PACKAGES filebrowser"
+PACKAGES="$PACKAGES luci-app-filebrowser-go"
+PACKAGES="$PACKAGES luci-i18n-filebrowser-go-zh-cn"
+PACKAGES="$PACKAGES luci-app-amlogic"
+PACKAGES="$PACKAGES luci-i18n-amlogic-zh-cn"
+PACKAGES="$PACKAGES lucky"
+PACKAGES="$PACKAGES luci-app-lucky"
+PACKAGES="$PACKAGES luci-i18n-lucky-zh-cn"
+PACKAGES="$PACKAGES openlist2"
+PACKAGES="$PACKAGES luci-app-openlist2"
+PACKAGES="$PACKAGES luci-i18n-openlist2-zh-cn"
+PACKAGES="$PACKAGES luci-app-ramfree"
+PACKAGES="$PACKAGES luci-i18n-ramfree-zh-cn"
 
 # 追加自定义包
 PACKAGES="$PACKAGES $CUSTOM_PACKAGES"
