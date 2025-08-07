@@ -9,16 +9,16 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      - name: ⚙️ 安装依赖
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y build-essential libncurses5-dev zstd curl unzip tree
+
       - name: ⏬ 下载 ImageBuilder
         run: |
           curl -L -o imagebuilder.tar.zst https://github.com/Kwonelee/fenliu/releases/download/rootfs/istoreos-imagebuilder-24.10.2-armsr-armv8.Linux-x86_64.tar.zst
           tar --use-compress-program=unzstd -xvf imagebuilder.tar.zst
           mv istoreos-imagebuilder-* imagebuilder
-
-      - name: ⚙️ 安装依赖
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y build-essential libncurses5-dev zstd curl unzip tree
 
       - name: ⏬ 复制和设置必备文件
         run: |
