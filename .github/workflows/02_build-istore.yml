@@ -196,8 +196,7 @@ jobs:
           echo "📦 正在下载预构建 rootfs"
           mkdir -p bin/targets/armsr/armv8
           curl -L -o bin/targets/armsr/armv8/rootfs.tar.gz \
-            https://github.com/Kwonelee/iStoreOS-Actions/releases/download/iStoreOS-rootfs-full/istoreos-armsr-armv8-generic-rootfs.tar.gz
-            #https://github.com/Kwonelee/iStoreOS-Actions/releases/download/iStoreOS-rootfs-lite/istoreos-armsr-armv8-generic-rootfs.tar.gz
+            https://github.com/Kwonelee/iStoreOS-Actions/releases/download/iStoreOS-rootfs-${{ inputs.openwrt_rootfs }}/istoreos-armsr-armv8-generic-rootfs.tar.gz
 
       - name: 🔍 查找rootfs.tar.gz所在路径
         id: find_rootfs
@@ -210,7 +209,7 @@ jobs:
           fi
           echo "file=$ROOTFS_FILE" >> $GITHUB_OUTPUT
 
-      - name: 🧱 打包iStoreOS-24.10.2
+      - name: 🧱 打包iStoreOS-24.10.2固件
         if: ${{ steps.down.outputs.status }} == 'success' && !cancelled()
         uses: ophub/amlogic-s9xxx-openwrt@main
         with:
