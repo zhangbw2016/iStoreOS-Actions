@@ -119,6 +119,12 @@ jobs:
       with:
         tag_name: iStoreOS-24.10.2-Release-${{ inputs.network_settings }}
         body: |
+          🌳 版本: iStoreOS-24.10.2
+          
+          👤 用户名: root
+          
+          🔒 密码: 无
+          
           🌳 IP: ${{ inputs.network_settings == 'static' ? inputs.ipaddr : '动态获取' }}
           
           🌏 网关: ${{ inputs.network_settings == 'static' ? inputs.gateway : '动态获取' }}
