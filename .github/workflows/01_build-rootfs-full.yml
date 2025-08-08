@@ -61,7 +61,7 @@ jobs:
         cp shell/prepare-packages.sh imagebuilder/
         cp shell/custom-packages.sh imagebuilder/
         cp files/etc/packages/*.ipk imagebuilder/packages/
-
+        
         #开机启动脚本，建议保留
         mkdir -p imagebuilder/files/etc/uci-defaults
         cp files/etc/uci-defaults/99-custom.sh imagebuilder/files/etc/uci-defaults/
