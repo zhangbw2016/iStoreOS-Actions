@@ -2,12 +2,20 @@ name: 💿 01_build-rootfs-release
 on:
   workflow_dispatch:
     inputs:
+      network_settings:
+        description: "请选择初始网络配置"
+        required: true
+        default: 'static'
+        type: choice
+        options:
+          - 'static'
+          - 'dhcp'
       ipaddr:
-        description: '请输入管理IP'
+        description: '请输入管理IP（静态地址时必填）'
         required: true
         default: '192.168.5.88'
       gateway:
-        description: '请输入默认网关'
+        description: '请输入默认网关（静态地址时必填）'
         required: true
         default: '192.168.5.1'
       include_docker:
