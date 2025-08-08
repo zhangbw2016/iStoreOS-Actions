@@ -1019,7 +1019,7 @@ PACKAGES="$PACKAGES zlib"
 PACKAGES="$PACKAGES zram-swap"
 PACKAGES="$PACKAGES -libustream-mbedtls"
 
-# O大打包脚本补充插件
+# O大打包脚本补充插件，其他依赖官方列表有集成
 PACKAGES="$PACKAGES perlbase-time"
 
 # 斐讯N1无线：无线问题未解决一般也用不上，故禁用；iw和iwinfo官方列表有集成
