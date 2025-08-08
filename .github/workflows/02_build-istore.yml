@@ -243,7 +243,7 @@ jobs:
             
             🔒 密码: 无
             
-            📒 说明: 固件IP和网关，对应iStoreOS-rootfs-${{ inputs.openwrt_rootfs }}的IP和网关
+            📒 说明: 固件默认IP和网关，对应iStoreOS-rootfs-${{ inputs.openwrt_rootfs }}的IP和网关
           files: |
             ${{ env.PACKAGED_OUTPUTPATH }}/*.img.gz
         env:
