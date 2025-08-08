@@ -236,14 +236,6 @@ jobs:
         uses: softprops/action-gh-release@v2.2.1
         with:
           tag_name: iStoreOS-firmware-${{ inputs.openwrt_rootfs }}
-          body: |
-            🌳 版本: iStoreOS-24.10.2
-            
-            👤 用户名: root
-            
-            🔒 密码: 无
-            
-            📒 说明: 固件默认IP和网关，对应iStoreOS-rootfs-${{ inputs.openwrt_rootfs }}的IP和网关
           files: |
             ${{ env.PACKAGED_OUTPUTPATH }}/*.img.gz
         env:
