@@ -18,12 +18,21 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
 
-    - name: Set executable permissions
+    - name: ⚙️ 设置可执行权限
       run: | 
         chmod +x arm64/build24.sh
         chmod +x shell/*.sh
 
-    - name: ⚙️ 安装依赖
+    - name: ⚙️ 设置IP和网关
+      run: |
+        echo "当前网络配置路径"
+        CONFIG_PATH="./files/etc/uci-defaults/99-custom.sh"
+        echo $CONFIG_PATH
+        echo "替换默认配置"
+        sed -i "/ipaddr/s/192.168.5.88/${{ github.event.inputs.ipaddr }}/g" "$CONFIG_PATH"
+        sed -i "/gateway/s/192.168.5.1/${{ github.event.inputs.gateway }}/g" "$CONFIG_PATH"
+
+    - name: ⏬ 安装依赖
       run: |
         sudo apt-get update
         sudo apt-get install -y build-essential libncurses5-dev zstd curl unzip tree
