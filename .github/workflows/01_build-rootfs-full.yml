@@ -51,7 +51,7 @@ jobs:
         #mkdir -p imagebuilder/files/etc/opkg
         #cp files/etc/opkg/distfeeds.conf imagebuilder/files/etc/opkg/
         
-        #临时解决N1通过U盘写入emmc后根分区变为只读状态的问题
+        #临时解决N1通过晶晨宝盒写入emmc后根分区变为只读状态的问题
         cp files/etc/rc.local imagebuilder/files/etc/
         
         #替换O大打包脚本的默认banner
