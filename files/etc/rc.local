@@ -1,0 +1,8 @@
+# Put your custom commands here that should be executed once
+# the system init finished. By default this file does nothing.
+
+# 新增：默认将根分区重新挂载为可读写
+mount -o remount,rw /
+
+bash /etc/custom_service/start_service.sh
+exit 0
