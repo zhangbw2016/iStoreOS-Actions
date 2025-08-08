@@ -31,7 +31,7 @@ sed -i "s/DISTRIB_DESCRIPTION='[^']*'/DISTRIB_DESCRIPTION='$NEW_DESCRIPTION'/" "
 
 # 修改banner
 cp /etc/banner1/banner /etc/
-rm /etc/banner1
+rm -r /etc/banner1
 
 # 计算网卡数量
 count=0
