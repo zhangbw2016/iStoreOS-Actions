@@ -1022,8 +1022,8 @@ PACKAGES="$PACKAGES -libustream-mbedtls"
 # O大打包脚本补充插件
 PACKAGES="$PACKAGES perlbase-time"
 
-# 斐讯N1 无线
-PACKAGES="$PACKAGES kmod-brcmfmac"
+# 斐讯N1无线：无线问题未解决一般也用不上，故禁用；iw和iwinfo官方列表有集成
+#PACKAGES="$PACKAGES kmod-brcmfmac"
 #PACKAGES="$PACKAGES wpad-basic-mbedtls"
 #PACKAGES="$PACKAGES iw"
 #PACKAGES="$PACKAGES iwinfo"
