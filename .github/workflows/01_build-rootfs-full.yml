@@ -105,6 +105,10 @@ jobs:
       uses: softprops/action-gh-release@v2.2.1
       with:
         tag_name: iStoreOS-rootfs-full
+        body: |
+          🌳 IP: ${{ inputs.ipaddr }}
+          
+          🌏 网关: ${{ inputs.gateway }}
         files: |
           imagebuilder/bin/targets/armsr/armv8/*generic-rootfs.tar.gz
         token: ${{ secrets.GH_TOKEN }}
