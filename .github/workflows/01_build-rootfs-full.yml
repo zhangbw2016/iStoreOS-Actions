@@ -31,6 +31,8 @@ jobs:
         echo "替换默认配置"
         sed -i "/ipaddr/s/192.168.5.88/${{ github.event.inputs.ipaddr }}/g" "$CONFIG_PATH"
         sed -i "/gateway/s/192.168.5.1/${{ github.event.inputs.gateway }}/g" "$CONFIG_PATH"
+        echo "输出配置"
+        cat $CONFIG_PATH
 
     - name: ⏬ 安装依赖
       run: |
