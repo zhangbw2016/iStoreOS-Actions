@@ -2,6 +2,14 @@ name: 💿 01_build-rootfs-full
 on:
   workflow_dispatch:
     inputs:
+      ipaddr:
+        description: '请输入管理IP'
+        required: true
+        default: '192.168.5.88'
+      gateway:
+        description: '请输入默认网关'
+        required: true
+        default: '192.168.5.1'
       include_docker:
         description: "是否编译Docker插件"
         required: true
