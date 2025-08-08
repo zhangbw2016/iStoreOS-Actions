@@ -1,4 +1,4 @@
-name: 💿 01_build-rootfs-full
+name: 💿 01_build-rootfs-release
 on:
   workflow_dispatch:
     inputs:
@@ -104,7 +104,7 @@ jobs:
     - name: 🚀 上传到 Release
       uses: softprops/action-gh-release@v2.2.1
       with:
-        tag_name: iStoreOS-rootfs-full
+        tag_name: iStoreOS-24.10.2-Release
         body: |
           🌳 IP: ${{ inputs.ipaddr }}
           
