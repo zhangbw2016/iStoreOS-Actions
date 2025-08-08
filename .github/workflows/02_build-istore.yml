@@ -243,7 +243,7 @@ jobs:
             
             🔒 密码: 无
             
-            📒 说明: 单网口设备默认网口为LAN，旁路由模式，需要接入主路由器后进后台查找对应IP地址访问，反之双网口设备默认网口为WAN+LAN，主路由模式。
+            📒 说明: 固件IP和网关，对应iStoreOS-rootfs-${{ inputs.openwrt_rootfs }}的IP和网关
           files: |
             ${{ env.PACKAGED_OUTPUTPATH }}/*.img.gz
         env:
