@@ -4,5 +4,4 @@
 # 新增：重新挂载根文件系统为可读写模式
 mount -o remount,rw /
 
-bash /etc/custom_service/start_service.sh
 exit 0
