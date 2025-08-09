@@ -119,15 +119,15 @@ jobs:
       with:
         tag_name: iStoreOS-24.10-Release-${{ inputs.network_settings }}
         body: |
-          🌳 版本:  iStoreOS-24.10.2-Release
+          🌳 版本: iStoreOS-24.10.2-Release
           
-          👤 用户名:  root
+          👤 用户名: root
           
-          🔒 密码:  无
+          🔒 密码: 无
           
-          🌳 IP:  ${{ inputs.network_settings == 'static' && inputs.ipaddr || '动态获取（从上级路由找寻）' }}
+          🌳 IP: ${{ inputs.network_settings == 'static' && inputs.ipaddr || '动态获取（从上级路由找寻）' }}
           
-          🌏 网关:  ${{ inputs.network_settings == 'static' && inputs.gateway || '动态获取（从上级路由找寻）' }}
+          🌏 网关: ${{ inputs.network_settings == 'static' && inputs.gateway || '动态获取（从上级路由找寻）' }}
         files: |
           imagebuilder/bin/targets/armsr/armv8/*generic-rootfs.tar.gz
         token: ${{ secrets.GH_TOKEN }}
