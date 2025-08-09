@@ -217,7 +217,7 @@ jobs:
           fi
           echo "file=$ROOTFS_FILE" >> $GITHUB_OUTPUT
 
-      - name: 🧱 打包iStoreOS-24.10.2固件
+      - name: 🧱 打包iStoreOS固件
         if: ${{ steps.down.outputs.status }} == 'success' && !cancelled()
         uses: ophub/amlogic-s9xxx-openwrt@main
         with:
