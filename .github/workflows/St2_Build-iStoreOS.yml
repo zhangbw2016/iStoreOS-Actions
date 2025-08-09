@@ -236,10 +236,10 @@ jobs:
             FILENAME=$(basename "$FILE")
             NEW_FILENAME=$(echo "$FILENAME" | sed 's/openwrt/istoreos_24.10.2/g')
             if [ "$FILENAME" != "$NEW_FILENAME" ]; then
-             mv "$FILE" "${{ env.PACKAGED_OUTPUTPATH }}/$NEW_FILENAME"
-             echo "Renamed $FILENAME to $NEW_FILENAME"
+              mv "$FILE" "${{ env.PACKAGED_OUTPUTPATH }}/$NEW_FILENAME"
+              echo "Renamed $FILENAME to $NEW_FILENAME"
             else
-             echo "No need to rename $FILENAME"
+              echo "No need to rename $FILENAME"
             fi
           done
 
