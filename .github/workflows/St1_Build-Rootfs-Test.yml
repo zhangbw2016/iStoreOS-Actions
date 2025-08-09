@@ -102,15 +102,13 @@ jobs:
       with:
         tag_name: iStoreOS-24.10-Test-${{ inputs.network_settings }}
         body: |
-          🌳 版本: iStoreOS-24.10.2-Test
+          ©️ 版本： iStoreOS-24.10.2-Test
           
-          👤 用户名: root
+          👤 用户名： root
           
-          🔒 密码: 无
+          🔒 密码： 无
           
-          🌳 IP: ${{ inputs.ipaddr }}
-          
-          🌏 网关: ${{ inputs.gateway }}
+          🌳 IP： ${{ inputs.ipaddr }}
         files: |
           imagebuilder/bin/targets/armsr/armv8/*generic-rootfs.tar.gz
       env:
