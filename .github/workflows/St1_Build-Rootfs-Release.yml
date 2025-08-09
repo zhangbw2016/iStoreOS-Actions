@@ -127,9 +127,9 @@ jobs:
           
           🔒 密码: 无
           
-          🌳 IP: ${{ inputs.network_settings == 'static' && inputs.ipaddr || '动态获取（从上级路由找寻）' }}
+          🌳 IP: ${{ inputs.network_settings == 'static' && inputs.ipaddr || '单网口-动态获取（从上级路由找寻）；多网口-IP：192.168.100.1' }}
           
-          🌏 网关: ${{ inputs.network_settings == 'static' && inputs.gateway || '动态获取（从上级路由找寻）' }}
+          🌏 网关: ${{ inputs.network_settings == 'static' && inputs.gateway || '单网口-动态获取（从上级路由找寻）；多网口-IP：192.168.100.1' }}
         files: |
           imagebuilder/bin/targets/armsr/armv8/*generic-rootfs.tar.gz
         token: ${{ secrets.GH_TOKEN }}
