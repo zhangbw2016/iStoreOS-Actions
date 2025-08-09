@@ -104,7 +104,7 @@ jobs:
         body: |
           ©️ 版本： iStoreOS-24.10.2-Test
           
-          🩵 内核： Please use Amlogic Service to replace the kernel
+          🩵 内核： Please Login to iStoreOS → System → Amlogic Service → Replace the kernel
           
           👤 用户名： root
           
