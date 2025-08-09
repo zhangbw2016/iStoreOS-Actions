@@ -115,7 +115,7 @@ jobs:
       with:
         tag_name: iStoreOS-24.10-Test-${{ inputs.network_settings }}
         body: |
-          📌 版本： iStoreOS-24.10.2-Test
+          🔄 版本： iStoreOS-24.10.2-Test
           
           🧠 内核： Please Login to iStoreOS → System → Amlogic Service → Replace the kernel
           
