@@ -2,6 +2,13 @@ name: 💿 01_build-rootfs-test
 on:
   workflow_dispatch:
     inputs:
+      network_settings:
+        description: "请选择初始网络配置"
+        required: true
+        default: 'static'
+        type: choice
+        options:
+          - 'static'
       ipaddr:
         description: '请输入管理IP'
         required: true
@@ -86,7 +93,7 @@ jobs:
     - name: 🚀 上传到 Release
       uses: softprops/action-gh-release@v2.2.1
       with:
-        tag_name: iStoreOS-24.10-Test-static
+        tag_name: iStoreOS-24.10-Test-${{ inputs.network_settings }}
         body: |
           🌳 版本: iStoreOS-24.10.2-Test
           
