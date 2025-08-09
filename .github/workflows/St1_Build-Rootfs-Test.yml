@@ -56,18 +56,29 @@ jobs:
 
     - name: ⏬ 复制并设置必备文件
       run: |
-        cp arm64/Makefile imagebuilder/
-        cp files/etc/packages/*.ipk imagebuilder/packages/
-        mkdir -p imagebuilder/files/etc/uci-defaults
+        cp arm64/{build24.sh,Makefile} imagebuilder/
+        #cp arm64/repositories.conf imagebuilder/
+        cp shell/{prepare-packages.sh,custom-packages.sh} imagebuilder/
+        find files/etc/packages/ -name "*.ipk" -exec cp {} imagebuilder/packages/ \;
+        
+        mkdir -p imagebuilder/files/etc/{uci-defaults,banner1}
+        #添加开机启动脚本
         cp files/etc/uci-defaults/99-custom.sh imagebuilder/files/etc/uci-defaults/
-        #cp files/etc/rc.local imagebuilder/files/etc/
-        mkdir -p imagebuilder/files/etc/banner1
+        #替换O大打包脚本的默认banner
         cp files/etc/banner imagebuilder/files/etc/banner1/
+        #临时解决通过晶晨宝盒写入emmc后根分区变为只读状态问题
+        #cp files/etc/rc.local imagebuilder/files/etc/
+        #替换系统软件源，一般不需要
+        #mkdir -p imagebuilder/files/etc/opkg
+        #cp files/etc/opkg/distfeeds.conf imagebuilder/files/etc/opkg/
+        
         cd imagebuilder
         echo "启用rootfs.tar.gz配置并停用非必要配置"
         sed -i 's/# CONFIG_TARGET_ROOTFS_TARGZ is not set/CONFIG_TARGET_ROOTFS_TARGZ=y/' .config
         sed -i "s|CONFIG_TARGET_ROOTFS_SQUASHFS=.*|# CONFIG_TARGET_ROOTFS_SQUASHFS is not set|g" .config
         sed -i "s|CONFIG_TARGET_IMAGES_GZIP=.*|# CONFIG_TARGET_IMAGES_GZIP is not set|g" .config
+        echo "打印action目录结构"
+        tree -L 1
 
     - name: 🧱 构建iStoreOS-rootfs
       run: |
