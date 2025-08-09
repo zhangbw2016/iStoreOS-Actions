@@ -1,4 +1,4 @@
-name: 💿 St1_build-rootfs-test
+name: 💿 St1_Build-Rootfs-Test
 on:
   workflow_dispatch:
     inputs:
