@@ -226,7 +226,7 @@ jobs:
           openwrt_kernel: ${{ inputs.openwrt_kernel }}
           auto_kernel: true
           kernel_repo: ophub/kernel
-          kernel_usage: stable
+          kernel_usage: flippy
           builder_name: Kwonelee
 
       - name: 📜 调整.img.gz 文件名
