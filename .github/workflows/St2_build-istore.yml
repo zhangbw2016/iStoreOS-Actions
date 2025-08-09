@@ -203,7 +203,7 @@ jobs:
         run: |
           echo "📦 正在下载预构建 rootfs"
           mkdir -p bin/targets/armsr/armv8
-          curl -L -o bin/targets/armsr/armv8/rootfs.tar.gz \
+          curl -L -o bin/targets/armsr/armv8/openwrt-armvirt-64-default-rootfs.tar.gz \
             https://github.com/${{ github.actor }}/iStoreOS-Actions/releases/download/iStoreOS-24.10-${{ inputs.openwrt_rootfs }}-${{ inputs.network_settings }}/istoreos-armsr-armv8-generic-rootfs.tar.gz
 
       - name: 🔍 查找rootfs.tar.gz所在路径
@@ -235,7 +235,7 @@ jobs:
           for FILE in ${{ env.PACKAGED_OUTPUTPATH }}/*.img.gz; do
             echo "Processing file: $FILE"
             FILENAME=$(basename "$FILE")
-            NEW_FILENAME=$(echo "$FILENAME" | sed 's/openwrt/istoreos/g')
+            NEW_FILENAME=$(echo "$FILENAME" | sed 's/openwrt/istoreos_24.10.2/g')
             if [ "$FILENAME" != "$NEW_FILENAME" ]; then
              mv "$FILE" "${{ env.PACKAGED_OUTPUTPATH }}/$NEW_FILENAME"
              echo "Renamed $FILENAME to $NEW_FILENAME"
