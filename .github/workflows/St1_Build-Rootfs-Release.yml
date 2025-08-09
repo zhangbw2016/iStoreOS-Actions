@@ -1,4 +1,4 @@
-name: 💿 St1_build-rootfs-release
+name: 💿 St1_Build-Rootfs-Release
 on:
   workflow_dispatch:
     inputs:
