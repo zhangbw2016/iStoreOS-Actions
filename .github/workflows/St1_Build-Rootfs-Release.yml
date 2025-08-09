@@ -117,15 +117,17 @@ jobs:
       with:
         tag_name: iStoreOS-24.10-Release-${{ inputs.network_settings }}
         body: |
-          ©️ 版本： iStoreOS-24.10.2-Release
+          📌 版本： iStoreOS-24.10.2-Release
           
-          🩵 内核： Please Login to iStoreOS → System → Amlogic Service → Replace the kernel
+          🧠 内核： Please Login to iStoreOS → System → Amlogic Service → Replace the kernel
+          
+          🧩 集成： 包含了基础系统组件、驱动、网络工具、容器支持、LuCI界面及插件等。与官方集成列表基本一致
           
           👤 用户名： root
           
           🔒 密码： 无
           
-          🌳 IP： ${{ inputs.network_settings == 'static' && inputs.ipaddr || '单网口-动态获取（从上级路由找寻）；多网口-IP：192.168.100.1' }}
+          🌐 IP： ${{ inputs.network_settings == 'static' && inputs.ipaddr || '单网口-动态获取（从上级路由找寻）；多网口-IP：192.168.100.1' }}
         files: |
           imagebuilder/bin/targets/armsr/armv8/*generic-rootfs.tar.gz
         token: ${{ secrets.GH_TOKEN }}
