@@ -232,13 +232,7 @@ jobs:
       - name: 📜 调整.img.gz 文件名
         id: rename
         run: |
-          FILE=$(ls ${{ env.PACKAGED_OUTPUTPATH }}/*.img.gz | head -n1)
-          echo "Image file is: $FILE"
-          FILENAME=$(basename "$FILE")
-          echo "FILENAME=$FILENAME" >> $GITHUB_ENV
-          MODEL=${{ inputs.openwrt_board }}
-          KERNEL_VERSION=$(echo "$FILENAME" | grep -oP 'k\d+\.\d+\.\d+')
-          mv "$FILE" "${{ env.PACKAGED_OUTPUTPATH }}/istoreos_24.10.2_${MODEL}_${KERNEL_VERSION}_$(date +%Y.%m.%d).img.gz"
+          rename 's/openwrt/istoreos/' ${{ env.PACKAGED_OUTPUTPATH }}/*.img.gz
 
       - name: 🚀 上传到 Release
         uses: softprops/action-gh-release@v2.2.1
