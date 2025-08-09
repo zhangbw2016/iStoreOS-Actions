@@ -121,13 +121,15 @@ jobs:
       with:
         tag_name: iStoreOS-24.10-Release-${{ inputs.network_settings }}
         body: |
-          🌳 版本: iStoreOS-24.10.2-Release
+          ©️ 版本： iStoreOS-24.10.2-Release
           
-          👤 用户名: root
+          🩵 内核： Please use Amlogic Service to replace the kernel
           
-          🔒 密码: 无
+          👤 用户名： root
           
-          🌳 IP: ${{ inputs.network_settings == 'static' && inputs.ipaddr || '单网口-动态获取（从上级路由找寻）；多网口-IP：192.168.100.1' }}
+          🔒 密码： 无
+          
+          🌳 IP： ${{ inputs.network_settings == 'static' && inputs.ipaddr || '单网口-动态获取（从上级路由找寻）；多网口-IP：192.168.100.1' }}
         files: |
           imagebuilder/bin/targets/armsr/armv8/*generic-rootfs.tar.gz
         token: ${{ secrets.GH_TOKEN }}
