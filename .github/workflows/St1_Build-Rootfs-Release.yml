@@ -82,6 +82,8 @@ jobs:
         cp files/etc/banner imagebuilder/files/etc/banner1/
         #临时解决通过晶晨宝盒写入emmc后根分区变为只读状态问题
         cp files/etc/rc.local imagebuilder/files/etc/
+        mkdir -p imagebuilder/files/etc/openclash/core
+        cp files/etc/openclash/core/clash_meta imagebuilder/files/etc/openclash/core
         #替换系统软件源，一般不需要
         #mkdir -p imagebuilder/files/etc/opkg
         #cp files/etc/opkg/distfeeds.conf imagebuilder/files/etc/opkg/
