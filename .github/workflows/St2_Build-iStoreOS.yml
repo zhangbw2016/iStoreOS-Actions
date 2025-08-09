@@ -246,7 +246,7 @@ jobs:
       - name: 🚀 上传到 Release
         uses: softprops/action-gh-release@v2.2.1
         with:
-          tag_name: iStoreOS-24.10-${{ inputs.openwrt_rootfs }}-${{ inputs.network_settings }}
+          tag_name: 测试iStoreOS-24.10-${{ inputs.openwrt_rootfs }}-${{ inputs.network_settings }}
           files: |
             ${{ env.PACKAGED_OUTPUTPATH }}/*.img.gz
         env:
