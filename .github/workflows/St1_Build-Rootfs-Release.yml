@@ -70,11 +70,9 @@ jobs:
 
     - name: ⏬ 复制并设置必备文件
       run: |
-        cp arm64/build24.sh imagebuilder/
-        cp arm64/Makefile imagebuilder/
+        cp arm64/{build24.sh,Makefile} imagebuilder/
         #cp arm64/repositories.conf imagebuilder/
-        cp shell/prepare-packages.sh imagebuilder/
-        cp shell/custom-packages.sh imagebuilder/
+        cp shell/{prepare-packages.sh,custom-packages.sh} imagebuilder/
         cp files/etc/packages/*.ipk imagebuilder/packages/
         
         #开机启动脚本，建议保留
