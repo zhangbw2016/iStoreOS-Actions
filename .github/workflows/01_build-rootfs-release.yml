@@ -119,7 +119,7 @@ jobs:
       with:
         tag_name: iStoreOS-24.10-Release-${{ inputs.network_settings }}
         body: |
-          🌳 版本: iStoreOS-24.10.2
+          🌳 版本: iStoreOS-24.10.2-Release
           
           👤 用户名: root
           
