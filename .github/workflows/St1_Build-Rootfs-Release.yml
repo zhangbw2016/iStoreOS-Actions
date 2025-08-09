@@ -75,20 +75,16 @@ jobs:
         cp shell/{prepare-packages.sh,custom-packages.sh} imagebuilder/
         cp files/etc/packages/*.ipk imagebuilder/packages/
         
-        #开机启动脚本，建议保留
-        mkdir -p imagebuilder/files/etc/uci-defaults
+        mkdir -p imagebuilder/files/etc/{uci-defaults,banner1}
+        #添加开机启动脚本
         cp files/etc/uci-defaults/99-custom.sh imagebuilder/files/etc/uci-defaults/
-        
+        #临时解决通过晶晨宝盒写入emmc后根分区变为只读状态问题
+        cp files/etc/rc.local imagebuilder/files/etc/
+        #替换O大打包脚本的默认banner
+        cp files/etc/banner imagebuilder/files/etc/banner1/
         #替换系统软件源，一般不需要
         #mkdir -p imagebuilder/files/etc/opkg
         #cp files/etc/opkg/distfeeds.conf imagebuilder/files/etc/opkg/
-        
-        #临时解决N1通过晶晨宝盒写入emmc后根分区变为只读状态的问题
-        cp files/etc/rc.local imagebuilder/files/etc/
-        
-        #替换O大打包脚本的默认banner
-        mkdir -p imagebuilder/files/etc/banner1
-        cp files/etc/banner imagebuilder/files/etc/banner1/
         
         cd imagebuilder
         echo "启用rootfs.tar.gz配置并停用非必要配置"
