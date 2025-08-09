@@ -19,7 +19,7 @@ on:
         required: true
         default: '192.168.5.1'
       include_docker:
-        description: "是否编译Docker插件"
+        description: "是否集成Docker插件"
         required: true
         default: 'yes'
         type: choice
