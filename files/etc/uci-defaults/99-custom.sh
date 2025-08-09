@@ -33,7 +33,7 @@ sed -i "s/DISTRIB_DESCRIPTION='[^']*'/DISTRIB_DESCRIPTION='$NEW_DESCRIPTION'/" "
 cp /etc/banner1/banner /etc/
 rm -r /etc/banner1
 
-# 网络设置
+# 网络设置-static
 uci set network.lan.proto='static'
 uci set network.lan.ipaddr='192.168.5.88'
 uci set network.lan.netmask='255.255.255.0'
