@@ -9,6 +9,7 @@ on:
         default: "s905d"
         type: choice
         options:
+          - a311d-oes_s905d_wxy-oect_station-m2_tvi3315a_jp-tvbox_panther-x2
           - a311d
           - a311d-oes
           - alark35-3500
