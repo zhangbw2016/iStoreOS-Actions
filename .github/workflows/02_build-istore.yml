@@ -204,7 +204,7 @@ jobs:
           echo "📦 正在下载预构建 rootfs"
           mkdir -p bin/targets/armsr/armv8
           curl -L -o bin/targets/armsr/armv8/rootfs.tar.gz \
-            https://github.com/${{ github.actor }}/iStoreOS-Actions/releases/download/iStoreOS-24.10.2-${{ inputs.openwrt_rootfs }}-${{ inputs.network_settings }}/istoreos-armsr-armv8-generic-rootfs.tar.gz
+            https://github.com/${{ github.actor }}/iStoreOS-Actions/releases/download/iStoreOS-24.10-${{ inputs.openwrt_rootfs }}-${{ inputs.network_settings }}/istoreos-armsr-armv8-generic-rootfs.tar.gz
 
       - name: 🔍 查找rootfs.tar.gz所在路径
         id: find_rootfs
@@ -243,7 +243,7 @@ jobs:
       - name: 🚀 上传到 Release
         uses: softprops/action-gh-release@v2.2.1
         with:
-          tag_name: iStoreOS-24.10.2-${{ inputs.openwrt_rootfs }}-${{ inputs.network_settings }}
+          tag_name: iStoreOS-24.10-${{ inputs.openwrt_rootfs }}-${{ inputs.network_settings }}
           files: |
             ${{ env.PACKAGED_OUTPUTPATH }}/*.img.gz
         env:
