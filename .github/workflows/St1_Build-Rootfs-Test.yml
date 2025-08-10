@@ -69,7 +69,7 @@ jobs:
         #替换O大打包脚本的默认banner
         cp files/etc/banner imagebuilder/files/etc/banner1/
         mkdir -p imagebuilder/files/etc/openclash/core
-        cp files/etc/openclash/core/clash_meta imagebuilder/files/etc/openclash/core
+        cp files/etc/openclash/core/clash_meta imagebuilder/files/etc/openclash/core/
         
         cd imagebuilder
         echo "启用rootfs.tar.gz配置并停用非必要配置"
