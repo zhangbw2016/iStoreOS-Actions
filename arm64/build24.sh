@@ -1046,9 +1046,6 @@ PACKAGES="$PACKAGES luci-i18n-ramfree-zh-cn"
 # opc-rely依赖
 PACKAGES="$PACKAGES ruby-yaml"
 
-# psw-rely依赖
-PACKAGES="$PACKAGES chinadns-ng dns2socks ipt2socks microsocks naiveproxy shadowsocksr-libev-ssr-local shadowsocksr-libev-ssr-redir shadowsocksr-libev-ssr-server shadowsocks-rust-sslocal shadowsocks-rust-ssserver shadow-tls simple-obfs tcping trojan-plus tuic-client v2ray-geoip v2ray-geosite v2ray-plugin xray-core xray-plugin"
-
 # 追加自定义包
 PACKAGES="$PACKAGES $CUSTOM_PACKAGES"
 
