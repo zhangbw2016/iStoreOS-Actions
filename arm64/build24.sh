@@ -35,7 +35,9 @@ echo "$(date '+%Y-%m-%d %H:%M:%S') - 开始构建固件..."
 # 初始化变量
 PACKAGES=""
 
-# 官方集成列表
+<details>
+<summary>官方集成列表 (点击展开)</summary>
+<pre>
 PACKAGES="$PACKAGES adb"
 PACKAGES="$PACKAGES adb-enablemodem"
 #PACKAGES="$PACKAGES appfilter"
@@ -1018,6 +1020,8 @@ PACKAGES="$PACKAGES xz-utils"
 PACKAGES="$PACKAGES zlib"
 PACKAGES="$PACKAGES zram-swap"
 PACKAGES="$PACKAGES -libustream-mbedtls"
+</pre>
+</details>
 
 # O大打包脚本补充插件，其他依赖官方列表有集成
 PACKAGES="$PACKAGES perlbase-time"
