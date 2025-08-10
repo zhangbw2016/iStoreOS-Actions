@@ -35,8 +35,7 @@ echo "$(date '+%Y-%m-%d %H:%M:%S') - 开始构建固件..."
 # 初始化变量
 PACKAGES=""
 
-# 📦 包列表（可折叠）<<<
-if :; then
+# 官方集成列表
 PACKAGES="$PACKAGES adb"
 PACKAGES="$PACKAGES adb-enablemodem"
 #PACKAGES="$PACKAGES appfilter"
@@ -1019,10 +1018,8 @@ PACKAGES="$PACKAGES xz-utils"
 PACKAGES="$PACKAGES zlib"
 PACKAGES="$PACKAGES zram-swap"
 PACKAGES="$PACKAGES -libustream-mbedtls"
-fi
-# >>>
 
-# O大打包脚本补充插件，其他依赖官方列表有集成
+# O大打包脚本补充依赖，其他依赖官方列表有集成
 PACKAGES="$PACKAGES perlbase-time"
 
 # 斐讯N1无线：无线问题未解决一般也用不上，故禁用；iw和iwinfo官方列表有集成
@@ -1031,7 +1028,7 @@ PACKAGES="$PACKAGES perlbase-time"
 #PACKAGES="$PACKAGES iw"
 #PACKAGES="$PACKAGES iwinfo"
 
-# file/etc/packages目录的第三方可选插件
+# file/packages目录的第三方可选插件
 PACKAGES="$PACKAGES filebrowser"
 PACKAGES="$PACKAGES luci-app-filebrowser-go"
 PACKAGES="$PACKAGES luci-i18n-filebrowser-go-zh-cn"
