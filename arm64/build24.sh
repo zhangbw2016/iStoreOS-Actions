@@ -35,7 +35,8 @@ echo "$(date '+%Y-%m-%d %H:%M:%S') - 开始构建固件..."
 # 初始化变量
 PACKAGES=""
 
-# 📦 包列表（可折叠）{
+# 📦 包列表（可折叠）<<<
+if :; then
 PACKAGES="$PACKAGES adb"
 PACKAGES="$PACKAGES adb-enablemodem"
 #PACKAGES="$PACKAGES appfilter"
@@ -1018,7 +1019,8 @@ PACKAGES="$PACKAGES xz-utils"
 PACKAGES="$PACKAGES zlib"
 PACKAGES="$PACKAGES zram-swap"
 PACKAGES="$PACKAGES -libustream-mbedtls"
-# }
+fi
+# >>>
 
 # O大打包脚本补充插件，其他依赖官方列表有集成
 PACKAGES="$PACKAGES perlbase-time"
