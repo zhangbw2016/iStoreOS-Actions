@@ -1043,7 +1043,7 @@ PACKAGES="$PACKAGES luci-i18n-openlist2-zh-cn"
 PACKAGES="$PACKAGES luci-app-ramfree"
 PACKAGES="$PACKAGES luci-i18n-ramfree-zh-cn"
 
-# opc-rely依赖
+# opc-rely依赖，其他会自动集成
 PACKAGES="$PACKAGES ruby ruby-pstore ruby-psych ruby-yaml"
 
 # 追加自定义包
