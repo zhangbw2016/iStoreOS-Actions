@@ -61,18 +61,15 @@ jobs:
         cp shell/{prepare-packages.sh,custom-packages.sh} imagebuilder/
         find files/packages/ -name "*.ipk" -exec cp {} imagebuilder/packages/ \;
         
-        mkdir -p imagebuilder/files/etc/{uci-defaults,banner1}
+        mkdir -p imagebuilder/files/etc/{uci-defaults,opkg,banner1}
         #添加开机启动脚本
         cp files/etc/uci-defaults/99-custom.sh imagebuilder/files/etc/uci-defaults/
+        #替换软件源
+        cp files/etc/opkg/distfeeds.conf imagebuilder/files/etc/opkg/
         #替换O大打包脚本的默认banner
         cp files/etc/banner imagebuilder/files/etc/banner1/
         mkdir -p imagebuilder/files/etc/openclash/core
         cp files/etc/openclash/core/clash_meta imagebuilder/files/etc/openclash/core
-        #替换系统软件源，一般不需要
-        #mkdir -p imagebuilder/files/etc/opkg
-        #cp files/etc/opkg/distfeeds.conf imagebuilder/files/etc/opkg/
-        #临时解决通过晶晨宝盒写入emmc后根分区变为只读状态问题
-        #cp files/etc/rc.local imagebuilder/files/etc/
         
         cd imagebuilder
         echo "启用rootfs.tar.gz配置并停用非必要配置"
