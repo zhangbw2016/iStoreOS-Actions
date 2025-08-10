@@ -1043,6 +1043,11 @@ PACKAGES="$PACKAGES luci-i18n-openlist2-zh-cn"
 PACKAGES="$PACKAGES luci-app-ramfree"
 PACKAGES="$PACKAGES luci-i18n-ramfree-zh-cn"
 
+# opc-rely依赖
+PACKAGES="$PACKAGES ruby-yaml"
+
+# psw-rely依赖
+PACKAGES="$PACKAGES ruby-yaml"
 
 # 追加自定义包
 PACKAGES="$PACKAGES $CUSTOM_PACKAGES"
