@@ -59,7 +59,7 @@ jobs:
         cp arm64/{build24.sh,Makefile} imagebuilder/
         #cp arm64/repositories.conf imagebuilder/
         cp shell/{prepare-packages.sh,custom-packages.sh} imagebuilder/
-        find files/etc/packages/ -name "*.ipk" -exec cp {} imagebuilder/packages/ \;
+        find files/packages/ -name "*.ipk" -exec cp {} imagebuilder/packages/ \;
         
         mkdir -p imagebuilder/files/etc/{uci-defaults,banner1}
         #添加开机启动脚本
