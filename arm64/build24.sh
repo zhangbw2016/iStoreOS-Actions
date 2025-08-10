@@ -36,8 +36,8 @@ echo "$(date '+%Y-%m-%d %H:%M:%S') - 开始构建固件..."
 PACKAGES=""
 
 # 官方集成列表
-PACKAGES="$PACKAGES adb"                          # Android调试桥，用于与Android设备通信调试
-PACKAGES="$PACKAGES adb-enablemodem"              # 启用ADB调制解调器模式的工具
+#PACKAGES="$PACKAGES adb"                          # Android调试桥，用于与Android设备通信调试（未启用）
+#PACKAGES="$PACKAGES adb-enablemodem"              # 启用ADB调制解调器模式的工具（未启用）
 #PACKAGES="$PACKAGES appfilter"                    # 应用过滤工具（未启用）
 PACKAGES="$PACKAGES attr"                         # 文件属性管理工具
 PACKAGES="$PACKAGES avahi-dbus-daemon"            # Avahi服务的D-Bus守护进程，支持零配置网络
