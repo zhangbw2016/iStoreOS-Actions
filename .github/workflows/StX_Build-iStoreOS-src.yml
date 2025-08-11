@@ -231,6 +231,16 @@ jobs:
         uses: softprops/action-gh-release@v2.2.1
         with:
           tag_name: iStoreOS-24.10-SNAPSHOT
+          body: |
+            🔄 版本： iStoreOS-24.10.2-SNAPSHOT
+            
+            🧩 集成： 同官方集成列表一致，源码编译（俗称追新版）
+            
+            👤 用户名： root
+            
+            🔒 密码： password
+            
+            🌐 IP： 动态获取（从上级路由找寻）
           files: |
             ${{ env.PACKAGED_OUTPUTPATH }}/*.img.gz
         env:
