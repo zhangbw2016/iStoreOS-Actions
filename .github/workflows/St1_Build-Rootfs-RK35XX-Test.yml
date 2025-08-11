@@ -1,4 +1,4 @@
-name: 💿 St1_Build-Rootfs-RK35XX-test
+name: 💿 St1_Build-Rootfs-RK35XX-Test
 on:
   workflow_dispatch:
     inputs:
