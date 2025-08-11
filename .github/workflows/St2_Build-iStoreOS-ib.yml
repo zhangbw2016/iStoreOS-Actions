@@ -181,8 +181,8 @@ on:
         default: "Release"
         type: choice
         options:
-          - Release
-          - Test
+          - RELEASE
+          - TEST
       network_settings:
         description: "请选择初始网络配置（确保step1有生成）"
         required: true
