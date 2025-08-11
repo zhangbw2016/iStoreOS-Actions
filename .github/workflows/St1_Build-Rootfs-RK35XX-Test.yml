@@ -59,7 +59,7 @@ jobs:
         cp arm64/{build24.sh,Makefile} imagebuilder/
         #cp arm64/repositories.conf imagebuilder/
         cp shell/{prepare-packages.sh,custom-packages.sh} imagebuilder/
-        find files/packages/ -name "*.ipk" -exec cp {} imagebuilder/packages/ \;
+        #find files/packages/ -name "*.ipk" -exec cp {} imagebuilder/packages/ \;
         
         mkdir -p imagebuilder/files/etc/{uci-defaults,opkg,banner1}
         #添加开机启动脚本
@@ -102,10 +102,7 @@ jobs:
            -dnsmasq dnsmasq-full luci-i18n-firewall-zh-cn luci-i18n-ttyd-zh-cn luci-i18n-package-manager-zh-cn \
            luci-theme-argon luci-i18n-argon-zh-cn luci-app-argon-config luci-i18n-argon-config-zh-cn \
            \
-           luci-i18n-quickstart-zh-cn luci-i18n-dockerman-zh-cn \
-           luci-app-amlogic luci-i18n-amlogic-zh-cn \
-           \
-           -libustream-mbedtls" FILES="files"
+           luci-i18n-quickstart-zh-cn luci-i18n-dockerman-zh-cn" FILES="files"
 
     - name: 🚀 上传到 Release
       uses: softprops/action-gh-release@v2.2.1
