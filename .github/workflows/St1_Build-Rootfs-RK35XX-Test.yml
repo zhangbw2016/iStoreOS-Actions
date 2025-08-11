@@ -124,6 +124,6 @@ jobs:
           
           🌐 IP： ${{ inputs.ipaddr }}
         files: |
-          imagebuilder/bin/targets/armsr/armv8/*generic-rootfs.tar.gz
+          imagebuilder/bin/targets/rockchip/armv8/*generic-rootfs.tar.gz
       env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
