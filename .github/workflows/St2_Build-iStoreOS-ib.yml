@@ -178,7 +178,7 @@ on:
       openwrt_rootfs:
         description: "请选择rootfs通用底包（确保step1有生成）"
         required: true
-        default: "Release"
+        default: "RELEASE"
         type: choice
         options:
           - RELEASE
