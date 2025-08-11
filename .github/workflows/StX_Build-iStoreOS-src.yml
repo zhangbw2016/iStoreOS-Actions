@@ -232,15 +232,15 @@ jobs:
         with:
           tag_name: iStoreOS-24.10-SNAPSHOT-dhcp
           body: |
-            🔄 版本： iStoreOS-24.10.2-SNAPSHOT
+            🔄 版本： iStoreOS-24.10.2-SNAPSHOT（源码编译，追新版）
             
-            🧩 集成： 同官方集成列表一致，源码编译（俗称追新版）
+            🧩 集成： 包含了基础系统组件、驱动、网络工具、容器支持、LuCI界面及插件等。与官方集成列表基本一致
             
             👤 用户名： root
             
-            🔒 密码： password
+            🔒 密码： 无
             
-            🌐 IP： 动态获取（从上级路由找寻）
+            🌐 IP： 单网口-动态获取（从上级路由找寻）；多网口-IP：192.168.100.1
           files: |
             ${{ env.PACKAGED_OUTPUTPATH }}/*.img.gz
         env:
