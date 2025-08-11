@@ -1,4 +1,4 @@
-name: 💿 St3_Build-iStoreOS-src
+name: 💿 St3_Build-iStoreOS-SRC
 on:
   repository_dispatch:
   workflow_dispatch:
