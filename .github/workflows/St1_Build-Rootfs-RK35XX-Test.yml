@@ -52,7 +52,7 @@ jobs:
       run: |
         curl -L -o imagebuilder.tar.zst https://downloads.immortalwrt.org/releases/24.10.2/targets/rockchip/armv8/immortalwrt-imagebuilder-24.10.2-rockchip-armv8.Linux-x86_64.tar.zst
         tar --use-compress-program=unzstd -xvf imagebuilder.tar.zst
-        mv istoreos-imagebuilder-* imagebuilder
+        mv immortalwrt-imagebuilder-* imagebuilder
 
     - name: ⏬ 复制并设置必备文件
       run: |
