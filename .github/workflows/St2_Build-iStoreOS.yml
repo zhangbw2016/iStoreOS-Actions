@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       openwrt_board:
-        description: "请选择设备型号"
+        description: "请选择设备型号（默认N1）"
         required: true
         default: "s905d"
         type: choice
