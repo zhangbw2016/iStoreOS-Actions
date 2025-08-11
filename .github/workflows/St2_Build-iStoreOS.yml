@@ -165,7 +165,7 @@ on:
           - zk-r39a
           - zysj
       openwrt_kernel:
-        description: "请选择内核版本，若未能匹配则自动"
+        description: "请选择内核版本（若未匹配则自动）"
         required: true
         default: "6.6.y"
         type: choice
@@ -176,7 +176,7 @@ on:
           - 6.6.y
           - 6.12.y
       openwrt_rootfs:
-        description: "请选择iStoreOS-rootfs底包"
+        description: "请选择rootfs通用底包（确保step1有生成）"
         required: true
         default: "Release"
         type: choice
@@ -184,7 +184,7 @@ on:
           - Release
           - Test
       network_settings:
-        description: "请选择初始网络配置"
+        description: "请选择初始网络配置（确保step1有生成）"
         required: true
         default: "static"
         type: choice
