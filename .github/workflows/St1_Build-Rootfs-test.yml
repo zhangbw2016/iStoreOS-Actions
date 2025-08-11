@@ -1,4 +1,4 @@
-name: 💿 St1_Build-Rootfs-Test
+name: 💿 St1_Build-Rootfs-test
 on:
   workflow_dispatch:
     inputs:
@@ -110,9 +110,9 @@ jobs:
     - name: 🚀 上传到 Release
       uses: softprops/action-gh-release@v2.2.1
       with:
-        tag_name: iStoreOS-24.10-Test-${{ inputs.network_settings }}
+        tag_name: iStoreOS-24.10-TEST-${{ inputs.network_settings }}
         body: |
-          🔄 版本： iStoreOS-24.10.2-Test
+          🔄 版本： iStoreOS-24.10.2-TEST
           
           🧠 内核： Please Login to iStoreOS → System → Amlogic Service → Replace the kernel
           
