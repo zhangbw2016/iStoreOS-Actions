@@ -114,7 +114,9 @@ jobs:
         body: |
           🔄 版本： iStoreOS-24.10.2-TEST
           
-          🧠 内核： Please Login to iStoreOS → System → Amlogic Service → Replace the kernel
+          📂 来源： https://fw.koolcenter.com/iStoreOS/ib/armsr/
+          
+          🧠 内核： Please Login to iStoreOS → System → Amlogic Service → Replace the Kernel
           
           🧩 集成： 精简集成测试
           
