@@ -176,7 +176,7 @@ on:
           - 6.6.y
           - 6.12.y
       openwrt_rootfs:
-        description: "请选择rootfs通用底包（确保step1有生成）"
+        description: "请选择Rootfs通用底包（确保step1有生成）"
         required: true
         default: "RELEASE"
         type: choice
