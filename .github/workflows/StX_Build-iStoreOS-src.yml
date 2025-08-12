@@ -202,7 +202,7 @@ jobs:
           echo "file=$ROOTFS_FILE" >> $GITHUB_OUTPUT
 
       - name: 🧱 打包iStoreOS固件
-        uses: ophub/amlogic-s9xxx-openwrt@main
+        uses: Kwonelee/amlogic-s9xxx-openwrt@main
         with:
           openwrt_path: ${{ steps.find_rootfs.outputs.file }}
           openwrt_board: ${{ inputs.openwrt_board }}
