@@ -210,7 +210,7 @@ jobs:
           auto_kernel: true
           kernel_repo: ophub/kernel
           kernel_usage: stable
-          builder_name: Kwonelee
+          builder_name: kwonelee
 
       - name: 📜 调整.img.gz 文件名
         id: rename
