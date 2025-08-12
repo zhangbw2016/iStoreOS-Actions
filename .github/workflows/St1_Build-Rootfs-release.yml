@@ -118,7 +118,9 @@ jobs:
         body: |
           📌 版本： iStoreOS-24.10.2-RELEASE
           
-          🧠 内核： Please Login to iStoreOS → System → Amlogic Service → Replace the kernel
+          📂 来源： https://fw.koolcenter.com/iStoreOS/ib/armsr/
+          
+          🧠 内核： Please Login to iStoreOS → System → Amlogic Service → Replace the Kernel
           
           🧩 集成： 包含了基础系统组件、驱动、网络工具、容器支持、LuCI界面及插件等。与官方集成列表基本一致
           
