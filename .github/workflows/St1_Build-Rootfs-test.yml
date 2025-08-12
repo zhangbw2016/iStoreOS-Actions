@@ -112,7 +112,7 @@ jobs:
       with:
         tag_name: iStoreOS-24.10-TEST-${{ inputs.network_settings }}
         body: |
-          🔄 版本： iStoreOS-24.10.2-TEST
+          🔄 版本： iStoreOS-24.10.2-TEST（imagebuilder构建，测试版）
           
           📂 来源： https://fw.koolcenter.com/iStoreOS/ib/armsr/
           
