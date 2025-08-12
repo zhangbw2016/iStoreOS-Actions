@@ -234,6 +234,10 @@ jobs:
           body: |
             🔄 版本： iStoreOS-24.10.2-SNAPSHOT（源码编译，追新版）
             
+            📂 来源： https://github.com/istoreos/istoreos
+            
+            🧠 内核： Please Login to iStoreOS → System → Amlogic Service → Replace the Kernel
+            
             🧩 集成： 包含了基础系统组件、驱动、网络工具、容器支持、LuCI界面及插件等。与官方集成列表基本一致
             
             👤 用户名： root
