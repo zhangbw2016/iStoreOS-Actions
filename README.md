@@ -13,8 +13,11 @@
 # 🤗Screenshot
 <img width="1418" height="1162" alt="page1" src="https://github.com/user-attachments/assets/cd9b40cc-ae3c-43c4-b327-de03647a9fbe" />
 
+# 🌟Star戳一戳咯😀
+> **"据说点过Star的同学，都非常的帅气哟！✨"**  
+> **"你的⭐️是开源世界的阳光，照亮更多可能性~"**  
 
-# 🌟Thanks
-### [istoreos-builder](https://github.com/wukongdaily/istoreos-builder)
-### [amlogic-s9xxx-openwrt](https://github.com/ophub/amlogic-s9xxx-openwrt)
-### [istoreos](https://github.com/istoreos/istoreos)
+# 🙏Thanks
+- [istoreos-builder](https://github.com/wukongdaily/istoreos-builder)
+- [amlogic-s9xxx-openwrt](https://github.com/ophub/amlogic-s9xxx-openwrt)
+- [istoreos](https://github.com/istoreos/istoreos)
