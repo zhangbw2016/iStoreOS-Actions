@@ -4,9 +4,9 @@ on:
   workflow_dispatch:
     inputs:
       openwrt_board:
-        description: "请选择设备型号（默认N1）"
+        description: "请选择设备型号"
         required: true
-        default: "s905d"
+        default: "station-m2_tvi3315a_jp-tvbox_wxy-oect"
         type: choice
         options:
           - station-m2_tvi3315a_jp-tvbox_wxy-oect
