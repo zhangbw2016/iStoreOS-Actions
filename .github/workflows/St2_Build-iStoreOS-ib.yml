@@ -187,7 +187,7 @@ on:
       network_settings:
         description: "请选择初始网络配置（确保step1有生成）"
         required: true
-        default: "static"
+        default: "dhcp"
         type: choice
         options:
           - static
