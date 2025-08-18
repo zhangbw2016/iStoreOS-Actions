@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       openwrt_board:
-        description: "请选择设备型号（默认市场主流设备）"
+        description: "请选择设备型号（默认当下主流设备）"
         required: true
         default: "a311d-oes_s905d_wxy-oect_station-m2_tvi3315a_jp-tvbox_s922x-oes-plus"
         type: choice
