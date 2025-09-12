@@ -1040,8 +1040,6 @@ PACKAGES="$PACKAGES perlbase-time"
 # 斐讯N1无线：此固件未考虑无线，需自行研究；其中iw和iwinfo官方列表已集成
 #PACKAGES="$PACKAGES kmod-brcmfmac"
 #PACKAGES="$PACKAGES wpad-basic-mbedtls"
-#PACKAGES="$PACKAGES iw"
-#PACKAGES="$PACKAGES iwinfo"
 
 # file/packages目录的第三方可选插件
 PACKAGES="$PACKAGES filebrowser"
