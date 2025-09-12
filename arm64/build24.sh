@@ -29,13 +29,13 @@ fi
 # 输出调试信息
 echo "$(date '+%Y-%m-%d %H:%M:%S') - 开始构建固件..."
 
-# ============= iStoreOS仓库内的插件==============
-# 定义所需安装的包列表 下列插件你都可以自行删减
+# ============= iStoreOS 24.10 官方集成插件===================
+# ============= 若启用 则打开注释 ============================
 
 # 初始化变量
 PACKAGES=""
 
-# 官方集成列表
+# iStoreOS官方集成列表，若启用则打开注释
 #PACKAGES="$PACKAGES adb"                          # Android调试桥，用于与Android设备通信调试（未启用）
 #PACKAGES="$PACKAGES adb-enablemodem"              # 启用ADB调制解调器模式的工具（未启用）
 #PACKAGES="$PACKAGES appfilter"                    # 应用过滤工具（未启用）
@@ -1034,10 +1034,10 @@ PACKAGES="$PACKAGES zlib"                         # zlib压缩库
 PACKAGES="$PACKAGES zram-swap"                    # ZRAM交换工具
 PACKAGES="$PACKAGES -libustream-mbedtls"          # 移除mbedtls的ustream库
 
-# O大打包脚本补充依赖，其他依赖官方列表有集成
+# 固件打包脚本必要依赖，其他依赖官方列表已集成
 PACKAGES="$PACKAGES perlbase-time"
 
-# 斐讯N1无线：无线问题未解决一般也用不上，故禁用；iw和iwinfo官方列表有集成
+# 斐讯N1无线：此固件未考虑无线，需自行研究；其中iw和iwinfo官方列表已集成
 #PACKAGES="$PACKAGES kmod-brcmfmac"
 #PACKAGES="$PACKAGES wpad-basic-mbedtls"
 #PACKAGES="$PACKAGES iw"
@@ -1064,11 +1064,9 @@ PACKAGES="$PACKAGES ruby ruby-pstore ruby-psych ruby-yaml"
 # 追加自定义包
 PACKAGES="$PACKAGES $CUSTOM_PACKAGES"
 
-
 # 构建镜像
 echo "开始构建......打印所有包名===="
 echo "$PACKAGES"
-
 
 # 开始构建
 make image PROFILE=generic PACKAGES="$PACKAGES" FILES="files"
