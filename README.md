@@ -37,7 +37,7 @@
 
 # 🤗Screenshot
 <p align="center">
-    <img src="https://github.com/Kwonelee/iStoreOS-Actions/raw/main/files/screenshot/screenshot1.png">
+    <img src="https://raw.githubusercontent.com/Kwonelee/iStoreOS-Actions/main/files/screenshot/screenshot1.png">
 </p>
 
 # 🌟Star戳一戳，好运加满！😆
