@@ -8,7 +8,32 @@
 > **使用此仓库必须设置机密token，Actions云编译固件时需要用到，通常在仓库设置里面。机密键名为 `GH_TOKEN`（严禁在仓库可视代码中填写，否则后果自负）**
 
 # 😊Supported devices
-> a311d, a311d-oes, s922x-oes-plus, wxy-oect, wxy-oect-replaced, panther-x2, jp-tvbox, s905x3-hk1, tanix-tx6, s905l-b860av21u, s905l2-e900v21e, s905l, s905l-aurora-1s, s905l-mg101, s905l2, s905l2-wojia, s905l3, s905l3-cm211, s905l3-unt400g1, s905l3-unt402a, s905l3a, s905l3a-cm311, s905l3a-m401a, s905l3b, s905l3b-e900v21d, s905l3b-e900v22d, s905l3b-e900v22e, s905l3b-ip103h, s905l3b-rg020et-ca, s905l3b-unt403a, s905lb-ipbs9505, s905lb-q96-mini, s905lb-r3300l, r66s, r68s, nanopc-t6, nanopi-r5c, nanopi-r5s, orangepi-5-plus, orangepi-5b, alark35-3500, anas3035, beikeyun, chainedbox, crrc, dc-a588, dg3399, dg-tn3568, dlfr100, e20c, e25, eaidk-610, emb3531, fine3399, firefly-rk3399, fmx1-pro, h28k, h66k, h68k, h69k, h88k, h88k-v3, h96-max-m2, hs530r, hugsun-x99, ipc-r, king3399, kylin3399, lckfb-tspi, leez, lx-r3s, mrkaio-m68s, renegade-rk3328, rk3318-box, rock5b, rock5c, ruisen-box, s905, s905-beelink-mini, s905-mxqpro-plus, s905d-ki-pro, s905d-sml5442tw, s905mb, s905w, s905w-w95, s905w-x96-mini, s905w-x96w, s905x, s905x-b860h, s905x-nexbox-a95x, s905x-t95, s905x-tbee, s905x-tx9, s905x2, s905x2-km3, s905x2-x96max-2g, s905x2-hg680fj, s905x3, s905x3-2101, s905x3-a100, s905x3-a95xf3, s905x3-a95xf3-gb, s905x3-b, s905x3-h96max, s905x3-ip1001m, s905x3-q1, s905x3-q2, s905x3-tx3, s905x3-tx3-bz, s905x3-ugoosx3, s905x3-whale, s905x3-x88-pro-x3, s905x3-x96air, s905x3-x96air-gb, s905x3-x96max, s912, s912-h96pro-plus, s912-m8s-pro, s912-nexbox-a1, s912-nexbox-a2, s912-onecloudpro, s912-phicomm-t1, s912-t95z-plus, s912-tx8-max, s912-tx9-pro-2g, s912-tx9-pro-3g, s912-x92, s912-zyxq-fake, s922x, s922x-ct2000, s922x-gtking, s922x-gtkingpro-h, s922x-odroid-n2, s922x-reva, s922x-ugoos-am6, seewo-sv21, smart-am40, smart-am60, station-m1, station-m2, sv-33a6x, swan1-w28, sw799, tb-ls3399, tn3399, tpm312, tqc-a01, tvi3315a, vplus, wocyber-a3, xiaobao, yskj, zcube1-max, zk-r39a, zysj
+| 芯片     | 设备 |
+|----------|------|
+| a311d    | Khadas-VIM3, WXY-OES |
+| s922x    | Beelink-GT-King, Beelink-GT-King-Pro, Ugoos-AM6-Plus, ODROID-N2, X88-King, Ali-CT2000, WXY-OES-Plus |
+| s905x3   | X96-Max+, HK1-Box, Vontar-X3, H96-Max-X3, Ugoos-X3, TX3(QZ), TX3(BZ), X96-Air, X96-Max+_A100, A95X-F3-Air, Tencent-Aurora-3Pro(s905x3-b), X96-Max+Q1, X96-Max+100W, X96-Max+_2101, Infinity-B32, Whale, X88-Pro-X3, X99-Max-Plus, Transpeed-X3-Plus |
+| s905x2   | X96Max-4G, X96Max-2G, MECOOL-KM3-4G, Tanix-Tx5-Max, A95X-F2, HG680-FJ |
+| s912     | Tanix-TX8-Max, Tanix-TX9-Pro(3G), Tanix-TX9-Pro(2G), Tanix-TX92, Nexbox-A1, Nexbox-A95X-A2, A95X, H96-Pro-Plus, VORKE-Z6-Plus, Mecool-M8S-PRO-L, Vontar-X92, T95Z-Plus, Octopus-Planet, Phicomm-T1, TX3-Mini, OneCloudPro-V1.1_V1.2 |
+| s905d    | MECOOL-KI-Pro, Phicomm-N1, SML-5442TW |
+| s905x    | HG680P, B860H, TBee-Box, T95, TX9, XiaoMI-3S, X96, Nexbox-a95x |
+| s905w    | X96-Mini, TX3-Mini, W95, X96W/FunTV, MXQ-Pro-4K |
+| s905mb   | S65 |
+| s905l    | UNT402A, M201-S, MiBox-4, MiBox-4C, MG101, E900V21C, IP108H-53u1m, Tencent-Aurora-1s, B860AV2.1, B860AV2.1U, HM201 |
+| s905l2   | MGV2000, MGV2000-K, MGV3000, Wojia-TV-IPBS9505, M301A, E900v21E, e900v21d, CM201-1, IP108H, MGV2000-CW |
+| s905l3   | CM211-1, CM311-1, HG680-LC, M401A, UNT400G1, UNT400G, UNT402A, ZXV10-BV310, M411A, ZXV10-B860AV3.2-M, ZXV10-B860AV2.1-U, E900V22D-2, CM201-1-6-YS, IP108H, M301A |
+| s905l3a  | E900V22C/D, CM311-1a-YST, M401A, M411A, UNT403A, UNT413A, ZTE-B863AV3.2-M, CM311-1a-CH, IP112H, B863AV3.1-M2 |
+| s905l3b  | CM201-1, CM211-1, CM311-1, E900V21D, E900V22D, E900V21E, E900V22E, M302A/M304A, Hisense-IP103H, TY1608, MGV2000, B860AV-2.1M, UNT403A, RG020ET-CA |
+| s905lb   | Q96-mini, BesTV-R3300L, SumaVision-Q7, MG101, s65, IPBS9505 |
+| s905     | Beelink-Mini-MX-2G, Sunvell-T95M, MXQ-Pro+4K, SumaVision-Q5 |
+| rk3588(s)| Radxa-Rock5B, Radxa-Rock5C, Orange-Pi-5-Plus, Beelink-IPC-R, HLink-H88K, HLink-H88K-V3, NanoPC-T6, Smart-Am60, DC-A588, Orangepi-5B |
+| rk3568   | FastRhino-R66S, FastRhino-R68S, Radxa-E25, NanoPi-R5S, NanoPi-R5C, HLink-H66K, HLink-H68K, HLink-H69K, Seewo-sv21, Mrkaio-m68s, Swan1-w28, Ruisen-box, DG-TN3568, Alark35-3500, MMBox-Anas3035, Wocyber-A3 |
+| rk3566   | Panther-X2, JP-TvBox, LCKFB-Taishan-Pi, WXY-OEC-turbo-4g, Station-M2 |
+| rk3528   | HLink-H28K, Radxa-E20C, H96-Max-M2 |
+| rk3399   | EAIDK-610, King3399, TN3399, Kylin3399, ZCube1-Max, CRRC, SMART-AM40, SW799, ZYSJ, DG-3399, DLFR100, Emb3531, Leez-p710, tvi3315a, xiaobao, Fine3399, Firefly-RK3399, LX-R3S, Hugsun-x99, Tb-ls3399, Hisense-hs530r, Tpm312, ZK-rk39a, YSKJ, Fmx1-Pro, Sv-33a6x |
+| rk3328   | BeikeYun, Chainedbox-L1-Pro, Station-M1, Bqeel-MVR9, Renegade/Firefly |
+| rk3318   | RX3318-Box |
+| h6       | Vplus, Tanix-TX6, TQC-A01 |
 
 # 🤗Screenshot
 <img width="1418" height="1162" alt="page1" src="https://github.com/user-attachments/assets/cd9b40cc-ae3c-43c4-b327-de03647a9fbe" />
