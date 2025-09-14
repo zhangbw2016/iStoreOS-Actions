@@ -75,9 +75,11 @@ PACKAGES="$PACKAGES dbus"                         # D-Bus消息总线系统
 PACKAGES="$PACKAGES dkml"                         # DKMS内核模块管理工具
 PACKAGES="$PACKAGES -dnsmasq"                     # 移除轻量DNS服务器dnsmasq
 PACKAGES="$PACKAGES dnsmasq-full"                 # 全功能DNS服务器和DHCP服务器
-PACKAGES="$PACKAGES docker"                       # Docker容器引擎
-PACKAGES="$PACKAGES docker-compose"               # Docker容器编排工具
-PACKAGES="$PACKAGES dockerd"                      # Docker守护进程
+if [ "$INCLUDE_DOCKER" = "yes" ]; then
+    PACKAGES="$PACKAGES docker"                       # Docker容器引擎
+    PACKAGES="$PACKAGES docker-compose"               # Docker容器编排工具
+    PACKAGES="$PACKAGES dockerd"                      # Docker守护进程
+fi
 PACKAGES="$PACKAGES dropbear"                     # 轻量级SSH服务器
 PACKAGES="$PACKAGES ds-lite"
 PACKAGES="$PACKAGES e100-firmware"                # Intel E100系列网卡固件
@@ -764,7 +766,9 @@ PACKAGES="$PACKAGES luci-app-cpufreq"             # CPU频率控制应用
 #PACKAGES="$PACKAGES luci-app-ddns"                # DDNS应用（未启用）
 #PACKAGES="$PACKAGES luci-app-ddnsto"              # DDNSTO应用（未启用）
 PACKAGES="$PACKAGES luci-app-diskman"             # 磁盘管理应用
-PACKAGES="$PACKAGES luci-app-dockerman"           # Docker管理应用
+if [ "$INCLUDE_DOCKER" = "yes" ]; then
+    PACKAGES="$PACKAGES luci-app-dockerman"           # Docker管理应用
+fi
 PACKAGES="$PACKAGES luci-app-fan"                 # 风扇控制应用
 #PACKAGES="$PACKAGES luci-app-filetransfer"        # 文件传输应用（未启用）
 PACKAGES="$PACKAGES luci-app-firewall"            # 防火墙应用
@@ -792,7 +796,9 @@ PACKAGES="$PACKAGES luci-i18n-cpufreq-zh-cn"      # CPU频率控制中文语言�
 #PACKAGES="$PACKAGES luci-i18n-ddns-zh-cn"         # DDNS中文语言包（未启用）
 #PACKAGES="$PACKAGES luci-i18n-ddnsto-zh-cn"       # DDNSTO中文语言包（未启用）
 PACKAGES="$PACKAGES luci-i18n-diskman-zh-cn"      # 磁盘管理中文语言包
-PACKAGES="$PACKAGES luci-i18n-dockerman-zh-cn"    # Docker管理中文语言包
+if [ "$INCLUDE_DOCKER" = "yes" ]; then
+    PACKAGES="$PACKAGES luci-i18n-dockerman-zh-cn"    # Docker管理中文语言包
+fi
 PACKAGES="$PACKAGES luci-i18n-fan-zh-cn"          # 风扇控制中文语言包
 #PACKAGES="$PACKAGES luci-i18n-filetransfer-zh-cn" # 文件传输中文语言包（未启用）
 PACKAGES="$PACKAGES luci-i18n-firewall-zh-cn"     # 防火墙中文语言包
@@ -810,7 +816,9 @@ PACKAGES="$PACKAGES luci-i18n-unishare-zh-cn"     # UniShare中文语言包
 PACKAGES="$PACKAGES luci-i18n-upnp-zh-cn"         # UPnP中文语言包
 PACKAGES="$PACKAGES luci-i18n-wol-zh-cn"          # 网络唤醒中文语言包
 PACKAGES="$PACKAGES luci-lib-base"                # Luci基础库
-PACKAGES="$PACKAGES luci-lib-docker"              # Luci Docker库
+if [ "$INCLUDE_DOCKER" = "yes" ]; then
+    PACKAGES="$PACKAGES luci-lib-docker"              # Luci Docker库
+fi
 #PACKAGES="$PACKAGES luci-lib-fs"                  # Luci文件系统库
 PACKAGES="$PACKAGES luci-lib-ip"                  # Luci IP库
 PACKAGES="$PACKAGES luci-lib-ipkg"                # Luci IPKG库
