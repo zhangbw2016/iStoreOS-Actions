@@ -2,8 +2,6 @@
 # ============= iStoreOS 24.10 仓库外的第三方插件==============
 # ============= 若启用 则打开注释 ============================
 
-# 广告拦截adghome
-#CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-adguardhome"
 # 分区扩容 by sirpdboy 
 #CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-partexp"
 #CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-i18n-partexp-zh-cn"
