@@ -36,9 +36,7 @@
 | h6       | Vplus, Tanix-TX6, TQC-A01 |
 
 # 🤗Screenshot
-<p align="center">
-    <img src="https://raw.githubusercontent.com/Kwonelee/iStoreOS-Actions/main/files/screenshot/screenshot1.png">
-</p>
+![screenshots](./files/screenshot/screenshot1.png)
 
 # 🌟Star戳一戳，好运加满！😆
 > **"点过 `Star` 的朋友，颜值与智慧双双在线！✨"**
